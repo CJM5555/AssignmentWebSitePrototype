@@ -1,0 +1,88 @@
+﻿
+@import url("https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,500,500i,600,600i,700,700i,800|Roboto:300,300i,400,400i,600,600i,700,700i&display=swap");
+:root {
+    --font-1: "Roboto", sans-serif;
+    --font-2: "Manrope", sans-serif;
+
+    --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+}
+
+/*Global stylesheet*/
+h1, h2, h4, h5, h6, p, th, td {
+    font-family: var(--font-2);
+}
+
+body{
+    margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+th {
+    background: #000;
+    color: white;
+    padding: 20px;
+}
+
+tr {
+    background: #FFF;
+}
+
+tr:nth-of-type(even) {
+    background: #f8f8f8;
+}
+
+td{
+    padding: 20px;
+}
+
+input {
+    padding: 10px 20px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    font-family: var(--font-2);
+    background: #000000;
+    padding: 10px 20px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal bold 18px "Calibri", sans-serif;
+    text-align: center;
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background: #fff radial-gradient(circle, transparent 1%, #000 1%) center/15000%;
+    color: #000;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
+    background-color: #000000;
+    color: #fff;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+
+/*Custom stylesheet*/
+.innerContent {
+    padding: 0;
+    width: 80%
+}
+
+.innerNav {
+    padding: 0;
+    width: 20%
+}
+
+.pager {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+

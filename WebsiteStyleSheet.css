@@ -16,6 +16,13 @@ body{
     margin: 0px;
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:100;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;

@@ -42,6 +42,15 @@ namespace AssignmentWebSitePrototype
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
 
         /// <summary>
+        /// Menu1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu Menu1;
+
+        /// <summary>
         /// linkAccount control.
         /// </summary>
         /// <remarks>
@@ -87,13 +96,13 @@ namespace AssignmentWebSitePrototype
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// Menu1 control.
+        /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
 
         /// <summary>
         /// SiteMapDataSource1 control.
@@ -103,14 +112,5 @@ namespace AssignmentWebSitePrototype
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
-
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     }
 }

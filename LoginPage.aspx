@@ -1,26 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="AssignmentWebSitePrototype.LoginPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style7 {
-            width: 50%;
+    .auto-style7 {
+        width: 50%;
         height: 265px;
     }
-        .auto-style10 {
-            width: 599px;
-        }
-        .auto-style11 {
-            width: 100%;
-        height: 391px;
+    .auto-style10 {
+        width: 599px;
     }
-        .auto-style13 {
-            width: 680px;
-        }
-        .auto-style14 {
-            width: 987px;
-        }
+    .auto-style11 {
+        width: 100%;
+        
+    }
+    .auto-style13 {
+        width: 680px;
+    }
+    .auto-style14 {
+        width: 987px;
+    }
     .auto-style15 {
         width: 50%;
-        height: 535px;
+        
     }
     </style>
 </asp:Content>

@@ -5,7 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Artwork</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
     <link rel="stylesheet" type="text/css" href="~/WebsiteStyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="~/SlidesShow.css" />
+    <script type="text/javascript" src="JavaScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>   
@@ -16,65 +23,101 @@
             transform: scale(1.02);
         }
         .auto-style3 {
-            height: 20px;
-        }
-        .auto-style4 {
-            height: 20px;
-            width: 872px;
+            
+            height: 40px;
         }
         .auto-style8 {
             width: 100%;
-            height: 80px;
+            height: 40px;
+            padding:0px
+        }
+        .auto-style12 {
+            width: 200px;
+        }
+        .auto-style13 {
+            height: 40px;
+            width: 39%;
+        }
+        .auto-style14 {
+            height: 40px;
+            width: 35%;
+        }
+        .auto-style15 {
+            height: 40px;
+            width: 200px;
+        }
+        .auto-style16 {
+            height: 40px;
+         
         }
     </style>
 </head>
-<body>
+<body onload="showSlides(slideIndex);">
     <form id="form1" runat="server">
-        <div>
+        <div class="header">
             <header>
             <table class="auto-style8" >
-                <tr>
-                    <td class="auto-style4" style="background-color:white;width:70%;padding:0px 10px;">
-                        <h3 style="color:black;font-size:40px;padding-left:10%">ArTis</h3>
+                <tr style="background-color:black;">
+                    <td class="auto-style14" style="background-color:black;padding:0px 10px 0px 10%;">
+                        <h3 style="color:white;font-size:30px;" class="auto-style12">ArTis</h3>
                         <p>
                             <asp:SiteMapPath ID="SiteMapPath1" runat="server" Visible="False">
                             </asp:SiteMapPath>
                         </p>
                         </td>
-                    <td class="auto-style3" style="background-color:white; padding:0px 10px;">
-                       <a style="margin:5px 5px"><asp:LinkButton ID="linkAccount" runat="server" Visible="False" OnClick="linkAccount_Click"></asp:LinkButton></a>
-                       <a style="margin:5px 5px"><asp:Label ID="lblGuest" runat="server" Text="Guest" ></asp:Label></a>
+                    <td class="auto-style13" style="background-color:black;padding:0px 10px 0px 10px;">
+                        <a >
+                            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2">
+                            <StaticMenuItemStyle Font-Bold="True" Font-Size="15px" HorizontalPadding="10px" ItemSpacing="20px" ForeColor="White" BorderColor="Black" />
+                        </asp:Menu></a> 
+                        </td>
+                    
+                    <td class="auto-style15" style="background-color:black; padding:0px 10px 0px 10px;">
+                       <a style="margin:0px 5px 0px 5px"><asp:LinkButton ID="linkAccount" runat="server" Visible="False" OnClick="linkAccount_Click"></asp:LinkButton></a>
+                       <a style="margin:0px 5px 0px 5px"><asp:Label ID="lblGuest" runat="server" Text="Guest" ForeColor="White" ></asp:Label></a>
+                    </td>
 
-                        &nbsp;</td>
-                    <td class="auto-style3" style="background-color:white;padding:0px 10px;">
-                        <a><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" Visible="True"/></a>
-                        &nbsp;</td>
-                    <td class="auto-style3" style="background-color:white;padding:0px 10px; ">
-                        <a><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" Visible="True"/></a>
-                        &nbsp;</td>
-                    <td class="auto-style3" style="background-color:white;padding:0px 10px;">
-                       <a><asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" Visible="False" PostBackUrl = "~/DefaultHome.aspx"/></a>
-                        &nbsp;</td>
+                    <td class="auto-style16" style="background-color:black;padding:0px 10px 0px 10px;">
+                        <a><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" Visible="false" /></a></td>
+                    <td class="auto-style3" style="background-color:black;padding:0px 10px 0px 10px;">
+                        <a><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" Visible="false"/></a></td>
+                    <td class="auto-style3" style="background-color:black;padding:0px 10px 0px 10px;">
+                       <a><asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" Visible="False" PostBackUrl = "~/DefaultHome.aspx" /></a></td>
                 </tr>
                 </table>
-                <div style="margin:5px auto 5px auto;background-color:black;padding:5px 25% 5px 25%">
-                        <a style="margin:0px auto 0px auto;align-content:center">  <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2">
-                            <StaticHoverStyle BorderStyle="Solid" BackColor="White" ForeColor="Black" />
-                            <StaticMenuItemStyle Font-Bold="True" Font-Size="20px" HorizontalPadding="15px" ItemSpacing="15px" VerticalPadding="10px" ForeColor="White" />
-                            <StaticMenuStyle BorderStyle="Solid" BorderColor="Black" />
-                        </asp:Menu></a> 
-                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-
-                 </div>
+                
            </header>
             </div>
-        <div>
+        <div style="margin-top:6%">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
             
         </div>
-            <footer></footer>
+            <footer> 
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                <div>
+
+                    <table style="width:100%;background-color:black">
+                        <tr style="background-color:black">
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr style="background-color:black">
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr style="background-color:black">
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+
+                </div>
+             </footer>
     </form>
 </body>
 </html>

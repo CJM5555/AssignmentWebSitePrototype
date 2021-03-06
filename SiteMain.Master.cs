@@ -45,13 +45,13 @@ namespace AssignmentWebSitePrototype
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             
-            Response.Redirect("RegisterPage.aspx");//redirect to register page
+            Response.Redirect("~/RegisterPage.aspx");//redirect to register page
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
            
-            Response.Redirect("LoginPage.aspx");//redirect to register page
+            Response.Redirect("~/LoginPage.aspx");//redirect to register page
         }
        
         protected void btnLogout_Click(object sender, EventArgs e)

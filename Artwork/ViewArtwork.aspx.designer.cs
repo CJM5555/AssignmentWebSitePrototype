@@ -7,22 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AssignmentWebSitePrototype.Artwork
-{
-
-
-    public partial class ViewArtwork
-    {
-
+namespace AssignmentWebSitePrototype.Artwork {
+    
+    
+    public partial class ViewArtwork {
+        
         /// <summary>
-        /// test control.
+        /// hBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image test;
-
+        protected global::System.Web.UI.WebControls.HyperLink hBack;
+        
+        /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image;
+        
         /// <summary>
         /// uploadPreview control.
         /// </summary>
@@ -31,7 +38,16 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload uploadPreview;
-
+        
+        /// <summary>
+        /// lblImagePath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImagePath;
+        
         /// <summary>
         /// lblArtworkId control.
         /// </summary>
@@ -40,7 +56,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblArtworkId;
-
+        
         /// <summary>
         /// dvArtwork control.
         /// </summary>
@@ -49,7 +65,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DetailsView dvArtwork;
-
+        
         /// <summary>
         /// artworkData control.
         /// </summary>

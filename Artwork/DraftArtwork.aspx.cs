@@ -13,9 +13,15 @@ namespace AssignmentWebSitePrototype.Artwork
         {
 
         }
-        protected string GetImage(object img)
+
+        protected void buttonClick(Object sender, EventArgs e)
         {
-            return "data:image/jpg;base64," + Convert.ToBase64String((byte[])img);
+            Button btn = (Button)sender;
+            if (btn.CommandName == "publish")
+            {
+                Response.Redirect("~/Artwork/ArtistDashboard.aspx");
+                
+            }
         }
     }
 }

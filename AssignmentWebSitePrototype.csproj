@@ -44,9 +44,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
@@ -65,55 +62,81 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="AccountManage.aspx" />
     <Content Include="App_Data\database.mdf" />
     <Content Include="App_Data\database_log.ldf">
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
-    <Content Include="images\14300.jpg" />
-    <Content Include="images\2008.4.1.jpg" />
-    <Content Include="images\21be231f254e98ff76b8daa048ec4cc9.jpg" />
-    <Content Include="images\284780.jpg" />
-    <Content Include="images\34-341203_art-wallpapers-high-resolution-src-widescreen-famous-high.jpg" />
-    <Content Include="images\4K-Ultra-HD-Wallpapers-Download-28-1366x768.jpg" />
-    <Content Include="images\667336.jpg" />
-    <Content Include="images\68c89fd2b229a3c317156d978055e9ef.jpg" />
-    <Content Include="images\83b0c33f32f6dc8e2f26758b0f0ba3ab.jpg" />
-    <Content Include="images\a9a7dbf580f5b561293ad0ff32a0beb5.jpg" />
+    <Content Include="images\183-1837660_modern-art-wallpapers-free-data-src-w-full.jpg" />
+    <Content Include="images\240_F_108897876_5DESaIMWGU0VaitMRyVrCq0lNE9SgIxb.jpg" />
+    <Content Include="images\240_F_133136262_7JAjC5kQpmKKpzNGcK7vCsnNYJRlwXYt.jpg" />
+    <Content Include="images\240_F_89641238_txEJE5sfGnkjxCLWwKcW45EE107fRPYA.jpg" />
+    <Content Include="images\abstract-art-modern-art-graphic-design-png-favpng-Hqmh0UZ4GU27cxn2fsy64TRkB.jpg" />
+    <Content Include="images\abstract-background-from-colorful-painted-concrete-wall_28586-9520.jpg" />
+    <Content Include="images\abstract-paint-canvas_53876-88900.jpg" />
+    <Content Include="images\abstract-painted-brush-strokes-background_52683-188690.jpg" />
+    <Content Include="images\abstract-textured-oil-painting_53876-887220.jpg" />
     <Content Include="images\arrangement-with-white-cups.jpg" />
-    <Content Include="images\artistic-backgrounds-3.jpg" />
-    <Content Include="images\artwork-4.jpg" />
-    <Content Include="images\Billie-Eilish-Everything-I-Wanted.jpg" />
-    <Content Include="images\c0fededf9499d6998ce388af55b7a1a0.jpg" />
+    <Content Include="images\collection-floral-art-pieces-wall_53876-658560.jpg" />
+    <Content Include="images\collection-motivational-posters-wall_53876-658750.jpg" />
+    <Content Include="images\colorful-oil-painting-hand-draw-abstract-background_89729-4170.jpg" />
+    <Content Include="images\colorful-oil-painting-multi-colors-abstract-background-texture_89729-6951.jpg" />
+    <Content Include="images\cute-paper-cut-style-artificial-cacti_23-2148301052.jpg" />
     <Content Include="images\depositphotos_3536215-stock-photo-illustrated-portrait-of-beautiful-girl.jpg" />
-    <Content Include="images\Et_z69dVkAMExRZ.jpg" />
-    <Content Include="images\f282d9f66cac7a97586bc9baaf15de26.jpg" />
+    <Content Include="images\depositphotos_57055695-stock-photo-kiss-of-inner-paint.jpg" />
+    <Content Include="images\depositphotos_65563221-stock-photo-realms-of-inner-paint.jpg" />
     <Content Include="images\flat-lay-monochromatic-leaves-with-copy-space.jpg" />
     <Content Include="images\flat-lay-monochromatic-pattern.jpg" />
+    <Content Include="images\footprint-black-sand-beach-macro-photography-human-trace-silky-black-beach-texture-with-shallow-depth-field-minimalistic-black-background-tenerife-voulcanic-sandy-shore_1217-17660.jpg" />
+    <Content Include="images\front-view-clear-glass-with-copy-space_23-21488162720.jpg" />
+    <Content Include="images\front-view-minimalistic-geometrical-figures-with-copy-space_23-2148830285.jpg" />
+    <Content Include="images\graffiti-children-bicycle_1122-22060.jpg" />
+    <Content Include="images\greeting-card-mock-up-gray-with-eucalyptus_79087-3201.jpg" />
+    <Content Include="images\hand-painted-watercolor-background-with-sky-clouds-shape_24972-10950.jpg" />
+    <Content Include="images\handy-baker-throwing-egg-air_23-2148302889.jpg" />
+    <Content Include="images\Kandinsky-Composition-II.jpg" />
+    <Content Include="images\Kandinsky-Light-Picture.jpg" />
+    <Content Include="images\minimal-background-mock-up-scene-with-podium-product-display-3d-rendering_85046-3990.jpg" />
+    <Content Include="images\minimalist-interior-design_23-2148605161.jpg" />
+    <Content Include="images\minimalist-red-hot-chili-pepper-dark-background_23-21487588910.jpg" />
+    <Content Include="images\modern-abstract-art-painting-modern-art-modern-abstract-art-painting-modern-art-contemporary-art-173323569.jpg" />
+    <Content Include="images\modern-abstract-painting-creative-background-contemporay-art-abstract-art-painting-modern-art-contemporary-art-171641049.jpg" />
+    <Content Include="images\modern-art-abstract-painting-vector-12053681.jpg" />
+    <Content Include="images\modern-art-acrylic-paint-painting-art-child-art-visual-arts-paint-watercolor-paint-artwork-Colorfulness-1563969.jpg" />
+    <Content Include="images\modern-art-painting-orange-art-yellow-acrylic-paint-line-visual-arts-paint-watercolor-paint-artwork-Tints-and-shades-Colorfulness-1563849.jpg" />
+    <Content Include="images\modern-painting.jpg" />
+    <Content Include="images\Modern_art_wall_splashed_handyman_dripped_free-form_painting.jpg" />
+    <Content Include="images\museum-of-modern-art-free-online-courses-photography-fashion-designboom-600.jpg" />
+    <Content Include="images\oil-painting-beautiful-lotus-flower_1232-1978.jpg" />
+    <Content Include="images\oil-painting-canvas-abstract-background_89729-1015.jpg" />
+    <Content Include="images\oil-paintings.jpg" />
+    <Content Include="images\olor-expressionism-abstract-expressionism-acrylic-paint-modern-art-contemporary-art-wall-art-texture-wallpaper-background-abstract-painting-free-i.jpg" />
+    <Content Include="images\paint-canvas_53876-887130.jpg" />
+    <Content Include="images\painted-flower-frame-wall_53876-764351.jpg" />
+    <Content Include="images\pexels-photo-1573434.jpeg" />
+    <Content Include="images\pexels-photo-1585325.jpeg" />
+    <Content Include="images\Picasso20Shiva20Bull20Lingam.jpg" />
+    <Content Include="images\set-creative-minimalist-hand-painted-illustrations_69626-860.jpg" />
+    <Content Include="images\set-minimalist-hand-painted-creative-art-curve-lines_1017-282191.jpg" />
+    <Content Include="images\sparrows-500x500.jpg" />
+    <Content Include="images\stage-with-turquoise-geometric-shapes_78895-16291.jpg" />
+    <Content Include="images\starry-night.jpg" />
+    <Content Include="images\swirl-pattern-abstract-watercolor-simple-background_23-21480788510.jpg" />
+    <Content Include="images\t_Remanence.jpg" />
+    <Content Include="images\white-cat-sitting-shelf_23-2148415267.jpg" />
     <Content Include="Artwork\ArtistDashboard.aspx" />
-    <Content Include="Artwork\BrowseArtwork.aspx" />
+    <Content Include="BrowseArtwork.aspx" />
     <Content Include="Artwork\DraftArtwork.aspx" />
     <Content Include="Artwork\PublishArtwork.aspx" />
     <Content Include="Artwork\ViewArtwork.aspx" />
     <Content Include="DefaultHome.aspx" />
-    <Content Include="images\image-20150514-28633-cvujq7.jpg" />
-    <Content Include="images\image_907.jpeg" />
-    <Content Include="images\IMG_0845-scaled.jpg" />
-    <Content Include="images\landscape_art_moon_127187_3840x2160.jpg" />
-    <Content Include="images\LTBTO#2+700x520.jpg" />
-    <Content Include="images\michaels-donation.jpg" />
-    <Content Include="images\oFAMGy.jpg" />
-    <Content Include="images\original.png" />
-    <Content Include="images\Steve-Biko-by-Therese-Mullins.jpg" />
-    <Content Include="images\Takashi-Murakami-artwork.jpg" />
-    <Content Include="images\wallpapersden.com_fun-floral-artwork_wxl.jpg" />
-    <Content Include="images\wp2260456.jpg" />
-    <Content Include="images\wp5032486.jpg" />
-    <Content Include="images\Yuta+Sakuma+-+7.png" />
-    <Content Include="JavaScript.js" />
     <Content Include="LoginPage.aspx" />
     <Content Include="RegisterPage.aspx" />
-    <Content Include="SlidesShow.css" />
     <Content Include="Web.config" />
     <Content Include="WebsiteStyleSheet.css" />
   </ItemGroup>
@@ -132,11 +155,11 @@
     <Compile Include="Artwork\ArtistDashboard.aspx.designer.cs">
       <DependentUpon>ArtistDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Artwork\BrowseArtwork.aspx.cs">
+    <Compile Include="BrowseArtwork.aspx.cs">
       <DependentUpon>BrowseArtwork.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Artwork\BrowseArtwork.aspx.designer.cs">
+    <Compile Include="BrowseArtwork.aspx.designer.cs">
       <DependentUpon>BrowseArtwork.aspx</DependentUpon>
     </Compile>
     <Compile Include="Artwork\DraftArtwork.aspx.cs">
@@ -191,8 +214,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SiteMain.Master" />
+    <Content Include="Artwork\ArtistDashboard.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
+    <Content Include="SiteMain.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -203,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AssignmentWebSitePrototype.Artwork
-{
-
-
-    public partial class PublishArtwork
-    {
-
+namespace AssignmentWebSitePrototype.Artwork {
+    
+    
+    public partial class PublishArtwork {
+        
         /// <summary>
         /// txtTitle control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
-
+        
         /// <summary>
         /// uploadPreview control.
         /// </summary>
@@ -31,7 +29,25 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload uploadPreview;
-
+        
+        /// <summary>
+        /// imgPreview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgPreview;
+        
+        /// <summary>
+        /// lblImagePath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImagePath;
+        
         /// <summary>
         /// txtDesc control.
         /// </summary>
@@ -40,7 +56,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDesc;
-
+        
         /// <summary>
         /// txtPrice control.
         /// </summary>
@@ -49,7 +65,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
-
+        
         /// <summary>
         /// txtQuantity control.
         /// </summary>
@@ -58,16 +74,16 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtQuantity;
-
+        
         /// <summary>
-        /// txtTag control.
+        /// ddlTags control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTag;
-
+        protected global::System.Web.UI.WebControls.DropDownList ddlTags;
+        
         /// <summary>
         /// btnAdd control.
         /// </summary>
@@ -76,7 +92,16 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAdd;
-
+        
+        /// <summary>
+        /// tagData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource tagData;
+        
         /// <summary>
         /// lblTags control.
         /// </summary>
@@ -85,7 +110,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTags;
-
+        
         /// <summary>
         /// btnDraft control.
         /// </summary>
@@ -94,7 +119,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDraft;
-
+        
         /// <summary>
         /// btnPublish control.
         /// </summary>

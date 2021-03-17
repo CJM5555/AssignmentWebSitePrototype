@@ -9,6 +9,7 @@
                         <td>
                             <br />
                             Drafted artwork<br />
+                            <br />
                             <asp:ListView ID="artworkList" runat="server" DataSourceID="artworkData" >
                                 <LayoutTemplate>
                                     <table cellpadding="2" runat="server">
@@ -17,6 +18,8 @@
                                         <th runat="server">Artwork Details</th>
                                         <th runat="server">Price</th>
                                         <th runat="server">Quantity</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                     <tr runat="server" id="itemPlaceholder"/>
                                     </table>
@@ -29,9 +32,9 @@
                                     </asp:DataPager>
                                 </LayoutTemplate>
                                 <ItemTemplate>
-                                    <tr runat="server">
+                                    <tr runat="server" class="zoom">
                                     <td>
-                                        <asp:Image Height="100px" Width="100px" runat="Server" ImageUrl='<%# GetImage(Eval("preview")) %>' />                                    </td>
+                                        <asp:Image Height="100px" Width="100px" runat="Server" ImageUrl='<%# "~/images/" + Eval("imageUrl") %>' />                                    </td>
                                     <td>
                                         <asp:Label runat="Server" Text='<%#Eval("title") %>' />
                                         <br />
@@ -43,13 +46,20 @@
                                     <td>
                                         <asp:Label runat="Server" Text='<%#Eval("quantity") %>' />
                                     </td>
+                                    <td>
+                                        <asp:Button runat="Server" Text='View' PostBackUrl='<%# "~/Artwork/ViewArtwork.aspx?artworkID=" + Eval("artworkID")%>'/>
+                                    </td>
+                                    <td>
+                                        <asp:Button runat="Server" Text='Publish' OnClick='buttonClick' CommandArgument='<%#Eval("artworkID")%>' CommandName='publish'/>
+                                    </td>
                                     </tr>
                                 </ItemTemplate>
 
                             </asp:ListView>
-                            <asp:SqlDataSource ID="artworkData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [preview], [description], [price], [quantity] FROM [Artwork] WHERE ([isDraft] = @isDraft)">
+                            <asp:SqlDataSource ID="artworkData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [artworkID], [title], [imageUrl], [description], [price], [quantity] FROM [Artwork] WHERE ([isDraft] = @isDraft) AND artistID=@artistID">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="1" Name="isDraft" Type="Int16" />
+                                    <asp:Parameter DefaultValue="1002" Name="artistID" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
                         </td>

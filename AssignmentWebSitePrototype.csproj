@@ -137,6 +137,9 @@
     <Content Include="DefaultHome.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="RegisterPage.aspx" />
+    <Content Include="scripts\dbo.Artwork.data.sql" />
+    <Content Include="scripts\dbo.Item_Tag.data.sql" />
+    <Content Include="scripts\dbo.Tag.data.sql" />
     <Content Include="Web.config" />
     <Content Include="WebsiteStyleSheet.css" />
   </ItemGroup>
@@ -229,7 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\" />
-    <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

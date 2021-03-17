@@ -34,7 +34,7 @@
                                 <ItemTemplate>
                                     <tr runat="server" class="zoom">
                                     <td>
-                                        <asp:Image Height="100px" Width="100px" runat="Server" ImageUrl='<%# GetImage(Eval("preview")) %>' />  </td>
+                                        <asp:Image Height="100px" Width="100px" runat="Server" ImageUrl='<%# "~/images/" + Eval("imageUrl") %>' />  </td>
                                     <td colspan="3">
                                         <asp:Label runat="Server" Text='<%#Eval("title") %>' />
                                         <br />
@@ -47,14 +47,15 @@
                                         <asp:Label runat="Server" Text='<%#Eval("quantity") %>' />
                                     </td>
                                     <td>
-                                        <asp:Button runat="Server" Text='View' PostBackUrl="./ViewArtwork.aspx"/>
+                                        <asp:Button runat="Server" Text='View' PostBackUrl='<%# "~/Artwork/ViewArtwork.aspx?artworkID=" + Eval("artworkID")%>'/>
                                     </td>
                                     </tr>
                                 </ItemTemplate>
                             </asp:ListView>
-                            <asp:SqlDataSource ID="artworkData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [preview], [description], [price], [quantity] FROM [Artwork] WHERE ([isDraft] = @isDraft)">
+                            <asp:SqlDataSource ID="artworkData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [artworkID], [title], [imageUrl], [description], [price], [quantity] FROM [Artwork] WHERE ([isDraft] = @isDraft) AND artistID=@artistID">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="0" Name="isDraft" Type="Int16" />
+                                    <asp:Parameter DefaultValue="1001" Name="artistID" /> 
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <asp:Label ID="lblArtworkSelect" runat="server"></asp:Label>

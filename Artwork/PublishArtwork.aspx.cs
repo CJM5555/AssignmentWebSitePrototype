@@ -14,8 +14,20 @@ namespace AssignmentWebSitePrototype.Artwork
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            uploadPreview.Attributes["onchange"] = "this.form.submit()";
 
+            if (IsPostBack && uploadPreview.HasFile)
+            {
+                uploadPreview.Visible = false;
+                Session["ImageUpload"] = uploadPreview;
+                lblImagePath.Text = uploadPreview.FileName;
+
+                System.IO.BinaryReader br = new System.IO.BinaryReader(uploadPreview.PostedFile.InputStream);
+                imgPreview.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(br.ReadBytes(uploadPreview.PostedFile.ContentLength));
+                imgPreview.Visible = true;
+            }
         }
+
         protected void storeToDatabase_Click(object sender, EventArgs e)
         {
             string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -23,17 +35,18 @@ namespace AssignmentWebSitePrototype.Artwork
 
             con.Open();
 
-            string strInsert = "INSERT INTO Artwork (artistID,title,description,preview,price,quantity,isDraft) VALUES (@artistID,@title,@desc,@preview,@price,@quantity,@isDraft)";
+            string strInsert = "INSERT INTO Artwork (artistID,title,description,imageUrl,price,quantity,isDraft) VALUES (@artistID,@title,@desc,@imageUrl,@price,@quantity,@isDraft)";
 
             SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-            cmdInsert.Parameters.AddWithValue("@artistID", 1006); // To be changed
+            cmdInsert.Parameters.AddWithValue("@artistID", 1002); // To be changed
             cmdInsert.Parameters.AddWithValue("@title", txtTitle.Text);
             cmdInsert.Parameters.AddWithValue("@desc", txtDesc.Text);
 
-            BinaryReader br = new BinaryReader(uploadPreview.PostedFile.InputStream);
-            byte[] bytes = br.ReadBytes(uploadPreview.PostedFile.ContentLength);
+            uploadPreview = (FileUpload) Session["ImageUpload"];
+            string imagePath = Server.MapPath("/images/" + lblImagePath.Text);
+            uploadPreview.SaveAs(imagePath);
 
-            cmdInsert.Parameters.AddWithValue("@preview", bytes);
+            cmdInsert.Parameters.AddWithValue("@imageUrl", lblImagePath.Text);
             cmdInsert.Parameters.AddWithValue("@price", Double.Parse(txtPrice.Text));
             cmdInsert.Parameters.AddWithValue("@quantity", Int16.Parse(txtQuantity.Text));
 
@@ -52,7 +65,7 @@ namespace AssignmentWebSitePrototype.Artwork
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            string tags = txtTag.Text;
+            string tags = ddlTags.SelectedItem.ToString();
 
             if (lblTags.Text.Equals(""))
             {
@@ -63,5 +76,6 @@ namespace AssignmentWebSitePrototype.Artwork
                 lblTags.Text += ", " + tags;
             }
         }
+
     }
 }

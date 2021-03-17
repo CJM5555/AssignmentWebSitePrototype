@@ -18,9 +18,12 @@
                     </tr>
                     <tr>
                         <td>
-                            Preview</td>
+                            Preview Image</td>
                         <td>
-                            <asp:FileUpload ID="uploadPreview" runat="server" />
+                            <asp:FileUpload ID="uploadPreview" runat="server"  onchange="imageUploaded()"/>
+                            <br />
+                            <asp:Image ID="imgPreview" runat="server" Height="200px" ImageUrl="" Width="200px" Visible="False"/>
+                            <asp:Label ID="lblImagePath" runat="server"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -48,9 +51,11 @@
                         <td>
                             Tags</td>
                         <td>
-                            <asp:TextBox ID="txtTag" runat="server"></asp:TextBox>
-&nbsp;<asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
-                            <br />
+                            <asp:DropDownList ID="ddlTags" runat="server" DataSourceID="tagData" DataTextField="title" DataValueField="tagID">
+                            </asp:DropDownList>
+                            &nbsp;<asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
+                            <asp:SqlDataSource ID="tagData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Tag]"></asp:SqlDataSource>
+&nbsp;<br />
                             <asp:Label ID="lblTags" runat="server"></asp:Label>
                         </td>
                     </tr>

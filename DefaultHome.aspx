@@ -34,4 +34,8 @@
         <span class="bullet" onclick="currentSlide(2)"></span> 
         <span class="bullet" onclick="currentSlide(3)"></span> 
     </div>
+
+    <div>
+
+    </div>
 </asp:Content>

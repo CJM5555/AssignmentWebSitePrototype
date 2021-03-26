@@ -41,6 +41,7 @@ namespace AssignmentWebSitePrototype
             {
                 Session["userEmail"] = txtEmailLogin.Text;
                 Session["userPassword"] = txtPasswordLogin.Text;
+                Session["userID"] = Convert.ToInt32(dtrUsers["userID"]);
                 Session["isLogin"] = 1;
                 //isLogin = true;
                 Response.Write("records exist");

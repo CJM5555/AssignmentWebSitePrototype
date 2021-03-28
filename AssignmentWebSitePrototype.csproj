@@ -220,6 +220,7 @@
     <Content Include="Artwork\ArtistDashboard.sitemap">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Artwork\Web.config" />
     <None Include="packages.config" />
     <Content Include="SiteMain.Master" />
     <None Include="Web.Debug.config">

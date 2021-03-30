@@ -16,7 +16,7 @@ namespace AssignmentWebSitePrototype.Artwork
         {
             uploadPreview.Attributes["onchange"] = "this.form.submit()";
 
-            if (Request.UrlReferrer.AbsolutePath.Equals("/Artwork/DraftArtwork.aspx"))
+            if (Request.UrlReferrer!= null && Request.UrlReferrer.AbsolutePath.Equals("/Artwork/DraftArtwork.aspx"))
             {
                 retrieveDraft();
             }

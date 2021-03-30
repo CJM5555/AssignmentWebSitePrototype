@@ -1,10 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="ViewArtwork.aspx.cs" Inherits="AssignmentWebSitePrototype.Artwork.ViewArtwork" %>
+<%@ Register TagPrefix="Nav" TagName="Bar" Src="~/Artwork/ArtistNavigation.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
                     <tr>
-                        <td>
+                        <td style="padding:0; padding-top:20px; vertical-align:top">
+                            <Nav:Bar ID="navBar" runat="server"/>
                             &nbsp;</td>
                         <td style="width:50%">
                             <asp:HyperLink ID="hBack" runat="server" NavigateUrl="~/Artwork/ArtistDashboard.aspx">Back To Dashboard</asp:HyperLink>

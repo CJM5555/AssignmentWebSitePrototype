@@ -40,7 +40,7 @@ td{
     padding: 20px;
 }
 
-input {
+input, select {
     padding: 10px 20px;
 }
 

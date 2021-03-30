@@ -13,6 +13,15 @@ namespace AssignmentWebSitePrototype.Artwork {
     public partial class PublishArtwork {
         
         /// <summary>
+        /// navBar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AssignmentWebSitePrototype.Artwork.ArtistNavigation navBar;
+        
+        /// <summary>
         /// txtTitle control.
         /// </summary>
         /// <remarks>
@@ -119,6 +128,15 @@ namespace AssignmentWebSitePrototype.Artwork {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtQuantity;
+        
+        /// <summary>
+        /// RangeValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
         
         /// <summary>
         /// RequiredFieldValidator5 control.

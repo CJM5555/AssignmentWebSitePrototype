@@ -13,6 +13,15 @@ namespace AssignmentWebSitePrototype.Artwork {
     public partial class ArtistDashboard {
         
         /// <summary>
+        /// navBar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AssignmentWebSitePrototype.Artwork.ArtistNavigation navBar;
+        
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>

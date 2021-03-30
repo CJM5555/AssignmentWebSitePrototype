@@ -1,15 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="PublishArtwork.aspx.cs" Inherits="AssignmentWebSitePrototype.Artwork.PublishArtwork" %>
+<%@ Register TagPrefix="Nav" TagName="Bar" Src="~/Artwork/ArtistNavigation.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
                     <tr>
-                        <td rowspan="8">
+                        <td style="padding:0; padding-top:20px; vertical-align:top; width:232px">
+                            <Nav:Bar ID="navBar" runat="server"/>
                             &nbsp;</td>
-                        <td colspan="2">
-                            Publish Artwork</td>
-                    </tr>
-                    <tr>
+                        <td>
+                            <br />
+                            Publish Artwork<br />
+
+                            <table style:"margin-top:15px">
+                                                    <tr>
                         <td>
                             Title</td>
                         <td>
@@ -46,7 +50,7 @@
                         <td>
                             <asp:TextBox ID="txtPrice" runat="server" TextMode="Number"></asp:TextBox>
                             <br />
-                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtPrice" ErrorMessage="Artwork Price cannot be negative! " MinimumValue="0" MaximumValue="9999999999999" ForeColor="Red" ValidationGroup="publish"></asp:RangeValidator>
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtPrice" ErrorMessage="Artwork Price cannot be negative! " MinimumValue="1" MaximumValue="9999999999999" ForeColor="Red" ValidationGroup="publish"></asp:RangeValidator>
                             <br />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPrice" ErrorMessage="Artwork Price is required" ForeColor="Red" ValidationGroup="publish"></asp:RequiredFieldValidator>
                         </td>
@@ -56,6 +60,8 @@
                             Quantity</td>
                         <td>
                             <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number"></asp:TextBox>
+                            <br />
+                            <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="txtPrice" ErrorMessage="Artwork Quantity cannot be negative! " MinimumValue="1" MaximumValue="9999999999999" ForeColor="Red" ValidationGroup="publish"></asp:RangeValidator>
                             <br />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Artwork Quantity is required" ForeColor="Red" ValidationGroup="publish"></asp:RequiredFieldValidator>
                         </td>
@@ -78,6 +84,10 @@
                         <td>
                             <asp:Button ID="btnDraft" runat="server" Text="Save As Draft" OnClick="storeToDatabase_Click" />
 &nbsp;<asp:Button ID="btnPublish" runat="server" Text="Publish" OnClick="storeToDatabase_Click" ValidationGroup="publish" />
+                        </td>
+                    </tr>
+                            </table>
+
                         </td>
                     </tr>
                 </table>

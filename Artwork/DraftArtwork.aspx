@@ -19,7 +19,6 @@
                                         <th runat="server">Price</th>
                                         <th runat="server">Quantity</th>
                                         <th></th>
-                                        <th></th>
                                     </tr>
                                     <tr runat="server" id="itemPlaceholder"/>
                                     </table>
@@ -45,9 +44,6 @@
                                     </td>
                                     <td>
                                         <asp:Label runat="Server" Text='<%#Eval("quantity") %>' />
-                                    </td>
-                                    <td>
-                                        <asp:Button runat="Server" Text='View' PostBackUrl='<%# "~/Artwork/ViewArtwork.aspx?artworkID=" + Eval("artworkID")%>'/>
                                     </td>
                                     <td>
                                         <asp:Button runat="Server" Text='Publish' OnClick='buttonClick' CommandArgument='<%#Eval("artworkID")%>' CommandName='publish'/>

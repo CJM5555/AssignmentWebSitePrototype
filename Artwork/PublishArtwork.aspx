@@ -61,7 +61,7 @@
                         <td>
                             <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number"></asp:TextBox>
                             <br />
-                            <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="txtPrice" ErrorMessage="Artwork Quantity cannot be negative! " MinimumValue="1" MaximumValue="9999999999999" ForeColor="Red" ValidationGroup="publish"></asp:RangeValidator>
+                            <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Artwork Quantity cannot be negative! " MinimumValue="1" MaximumValue="9999999999999" ForeColor="Red" ValidationGroup="publish"></asp:RangeValidator>
                             <br />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtQuantity" ErrorMessage="Artwork Quantity is required" ForeColor="Red" ValidationGroup="publish"></asp:RequiredFieldValidator>
                         </td>
@@ -72,10 +72,12 @@
                         <td>
                             <asp:DropDownList ID="ddlTags" runat="server" DataSourceID="tagData" DataTextField="title" DataValueField="tagID">
                             </asp:DropDownList>
-                            &nbsp;<asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
+                            &nbsp;<asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click"/>
+                            &nbsp;<asp:Button ID="btnClearTag" runat="server" Text="Clear Tags" OnClick="btnClearTag_Click" Visible="False"/>
                             <asp:SqlDataSource ID="tagData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Tag]"></asp:SqlDataSource>
 &nbsp;<br />
                             <asp:Label ID="lblTags" runat="server"></asp:Label>
+                        &nbsp;
                         </td>
                     </tr>
                     <tr>

@@ -28,8 +28,28 @@
                                 <Fields>
                                     <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
                                     <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
-                                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-                                    <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
+                                    <asp:TemplateField HeaderText="price" SortExpression="price">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("price") %>'></asp:TextBox>
+                                        </EditItemTemplate>
+                                        <InsertItemTemplate>
+                                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("price") %>'></asp:TextBox>
+                                        </InsertItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("price") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="quantity" SortExpression="quantity">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("quantity") %>'></asp:TextBox>
+                                        </EditItemTemplate>
+                                        <InsertItemTemplate>
+                                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("quantity") %>'></asp:TextBox>
+                                        </InsertItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("quantity") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:CommandField ButtonType="Button" ShowEditButton="true" />
                                 </Fields>
                             </asp:DetailsView>

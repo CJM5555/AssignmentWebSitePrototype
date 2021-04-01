@@ -9,12 +9,14 @@
                         <td>
 
                             <br />
+                            <div style="width:100%; padding:0px 50px 0px 50px;">
                             Artwork List<br />
-                            <asp:TextBox ID="txtSearch" runat="server" TextMode="Search"></asp:TextBox>
+                            <asp:TextBox ID="txtSearch" runat="server" TextMode="Search" Width="560px" placeholder="Please input keywords like artwork title, desciptrion or tags"></asp:TextBox>
                             &nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
+                            </div>
                             <br />
 
-                            <asp:ListView ID="artworkList" runat="server" DataSourceID="artworkData" GroupItemCount="3">
+                            <asp:ListView ID="artworkList" runat="server" GroupItemCount="3">
                                 <AlternatingItemTemplate>
                                     <td runat="server" style="">
                                         <asp:Image runat="server" ID="preview" ImageUrl='<%# "~/images/" + Eval("imageUrl") %>' Width="200px" Height="200px" />
@@ -75,13 +77,6 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <asp:DataPager runat="server" ID="artworkDataPager" PageSize="9" class="pager">
-                                    <Fields>
-                                        <asp:NextPreviousPagerField ShowFirstPageButton="true" ShowLastPageButton="true"
-                                        FirstPageText="|&lt;&lt; " LastPageText=" &gt;&gt;|"
-                                        NextPageText=" &gt; " PreviousPageText=" &lt; " />
-                                    </Fields>
-                                    </asp:DataPager>
                                 </LayoutTemplate>
                                 <SelectedItemTemplate>
                                     <td runat="server" style="">
@@ -99,7 +94,6 @@
                                         <br /></td>
                                 </SelectedItemTemplate>
                             </asp:ListView>
-                            <asp:SqlDataSource ID="artworkData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName FROM Artwork INNER JOIN Artists ON Artwork.artistID=Artists.artistID WHERE (Artwork.isDraft = 0)"></asp:SqlDataSource>
 
                         </td>
                 </table>

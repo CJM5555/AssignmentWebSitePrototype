@@ -162,6 +162,13 @@
     <Compile Include="Artwork\ArtistDashboard.aspx.designer.cs">
       <DependentUpon>ArtistDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Artwork\ArtistNavigation.ascx.cs">
+      <DependentUpon>ArtistNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Artwork\ArtistNavigation.ascx.designer.cs">
+      <DependentUpon>ArtistNavigation.ascx</DependentUpon>
+    </Compile>
     <Compile Include="BrowseArtwork.aspx.cs">
       <DependentUpon>BrowseArtwork.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

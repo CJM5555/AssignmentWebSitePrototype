@@ -18,6 +18,12 @@ namespace AssignmentWebSitePrototype
 
         protected void btnSubmit1_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
+        {
             Boolean isLogin = false;
             string strCon = ConfigurationManager.ConnectionStrings["conDatabase"].ConnectionString;
             SqlConnection con = new SqlConnection(strCon);
@@ -41,16 +47,21 @@ namespace AssignmentWebSitePrototype
 
                 dtrUsers.Close();
                 SqlCommand cmdInsert;
-                string strInsert = "Insert into Users (userName, email, password, accountStatus, isArtist) Values (@nameNew, @emailNew, @passNew, @statusOn, @notArtistYet)";
+                string strInsert = "Insert into Users (userName, email, password, accountStatus, isArtist) Values (@nameNew, @emailNew, @passNew, @statusOn, @notArtist)";
                 cmdInsert = new SqlCommand(strInsert, con);
 
-                cmdInsert.Parameters.AddWithValue("@nameNew", txtNameRegister.Text);
-                cmdInsert.Parameters.AddWithValue("@emailNew", txtEmailRegister.Text);
-                cmdInsert.Parameters.AddWithValue("@passNew", txtPasswordRegister.Text);
+
+                TextBox rgName = (TextBox)this.CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("UserName");
+                TextBox rgEmail = (TextBox)this.CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("Email");
+                TextBox rgPassword = (TextBox)this.CreateUserWizard1.CreateUserStep.ContentTemplateContainer.FindControl("Password");
+                cmdInsert.Parameters.AddWithValue("@nameNew", rgName.Text);
+                cmdInsert.Parameters.AddWithValue("@emailNew", rgEmail.Text);
+                cmdInsert.Parameters.AddWithValue("@passNew", rgPassword.Text);
                 cmdInsert.Parameters.AddWithValue("@statusOn", true);
-                cmdInsert.Parameters.AddWithValue("@notArtistYet", false);
+                cmdInsert.Parameters.AddWithValue("@notArtist", false);
                 int n = cmdInsert.ExecuteNonQuery();
-                if (n > 0) { 
+                if (n > 0)
+                {
                     Response.Write("Record is added");
                     isLogin = true;
                 }
@@ -59,9 +70,8 @@ namespace AssignmentWebSitePrototype
             }
             con.Close();
 
-            if(isLogin)
-                btnSubmit1.PostBackUrl = "~/DefaultHome.aspx";
-
+            //if (isLogin)
+               // btnSubmit1.PostBackUrl = "~/DefaultHome.aspx";
         }
     }
 }

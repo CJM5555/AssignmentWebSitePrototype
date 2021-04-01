@@ -10,33 +10,33 @@
 namespace AssignmentWebSitePrototype.Artwork {
     
     
-    public partial class DraftArtwork {
+    public partial class ArtistNavigation {
         
         /// <summary>
-        /// navBar control.
+        /// lblNavigate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AssignmentWebSitePrototype.Artwork.ArtistNavigation navBar;
+        protected global::System.Web.UI.WebControls.Label lblNavigate;
         
         /// <summary>
-        /// artworkList control.
+        /// hlDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView artworkList;
+        protected global::System.Web.UI.WebControls.HyperLink hlDashboard;
         
         /// <summary>
-        /// artworkData control.
+        /// hlDraft control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource artworkData;
+        protected global::System.Web.UI.WebControls.HyperLink hlDraft;
     }
 }

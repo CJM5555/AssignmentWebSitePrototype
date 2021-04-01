@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="~/Artwork/ArtistDashboard.aspx" title="Dashboard"  description="Artist Dashboard">
-    <siteMapNode url="~/Artwork/DraftArtwork.aspx" title="Draft"  description="Drafted artwork" />
-  </siteMapNode>
-</siteMap>

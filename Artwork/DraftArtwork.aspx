@@ -1,10 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="DraftArtwork.aspx.cs" Inherits="AssignmentWebSitePrototype.Artwork.DraftArtwork" %>
+<%@ Register TagPrefix="Nav" TagName="Bar" Src="~/Artwork/ArtistNavigation.ascx" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
                     <tr>
-                        <td>
+                        <td style="padding:0; padding-top:20px; vertical-align:top">
+                            <Nav:Bar ID="navBar" runat="server"/>
                             &nbsp;</td>
                         <td>
                             <br />
@@ -18,7 +21,6 @@
                                         <th runat="server">Artwork Details</th>
                                         <th runat="server">Price</th>
                                         <th runat="server">Quantity</th>
-                                        <th></th>
                                         <th></th>
                                     </tr>
                                     <tr runat="server" id="itemPlaceholder"/>
@@ -45,9 +47,6 @@
                                     </td>
                                     <td>
                                         <asp:Label runat="Server" Text='<%#Eval("quantity") %>' />
-                                    </td>
-                                    <td>
-                                        <asp:Button runat="Server" Text='View' PostBackUrl='<%# "~/Artwork/ViewArtwork.aspx?artworkID=" + Eval("artworkID")%>'/>
                                     </td>
                                     <td>
                                         <asp:Button runat="Server" Text='Publish' OnClick='buttonClick' CommandArgument='<%#Eval("artworkID")%>' CommandName='publish'/>

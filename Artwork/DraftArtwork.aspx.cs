@@ -19,8 +19,7 @@ namespace AssignmentWebSitePrototype.Artwork
             Button btn = (Button)sender;
             if (btn.CommandName == "publish")
             {
-                Response.Redirect("~/Artwork/ArtistDashboard.aspx");
-                
+                Response.Redirect("~/Artwork/PublishArtwork.aspx?artworkId=" + btn.CommandArgument);
             }
         }
     }

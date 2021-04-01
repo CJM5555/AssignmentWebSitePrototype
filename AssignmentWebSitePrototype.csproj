@@ -72,6 +72,8 @@
     <Content Include="App_Data\database_log.ldf">
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <Content Include="Artwork\ArtistNavigation.ascx" />
+    <Content Include="Artwork\ArtistNavigationBar.css" />
     <Content Include="images\183-1837660_modern-art-wallpapers-free-data-src-w-full.jpg" />
     <Content Include="images\240_F_108897876_5DESaIMWGU0VaitMRyVrCq0lNE9SgIxb.jpg" />
     <Content Include="images\240_F_133136262_7JAjC5kQpmKKpzNGcK7vCsnNYJRlwXYt.jpg" />
@@ -137,9 +139,11 @@
     <Content Include="DefaultHome.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="RegisterPage.aspx" />
+    <Content Include="scripts\dbo.Artists.data.sql" />
     <Content Include="scripts\dbo.Artwork.data.sql" />
     <Content Include="scripts\dbo.Item_Tag.data.sql" />
     <Content Include="scripts\dbo.Tag.data.sql" />
+    <Content Include="scripts\dbo.Users.data.sql" />
     <Content Include="Web.config" />
     <Content Include="WebsiteStyleSheet.css" />
   </ItemGroup>
@@ -217,10 +221,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Artwork\ArtistDashboard.sitemap">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Artwork\Web.config" />
     <None Include="packages.config" />
     <Content Include="SiteMain.Master" />
     <None Include="Web.Debug.config">

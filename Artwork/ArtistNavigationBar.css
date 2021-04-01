@@ -1,0 +1,35 @@
+﻿.drawer{
+    background-color:#fff;
+}
+
+.menu {
+    padding-left: 15px;
+}
+
+.navItem {
+    width: 100%;
+    padding: 15px 0px 15px 15px;
+    min-width: 150px;
+    font-family: var(--font-2);
+    background: #fff;
+    color: #000;
+    display: inline-block;
+    font: normal normal 18px "Calibri", sans-serif;
+    font-style: normal;
+    text-align: left;
+    text-decoration:none;
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.navItem:hover{
+    background: #000 radial-gradient(circle, transparent 1%, #000 1%) center/15000%;
+    color: #fff;
+}
+
+.navItem:active {
+    background-color: #fff;
+    color: #000;
+    background-size: 100%;
+    transition: background 0s;
+}

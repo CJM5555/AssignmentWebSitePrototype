@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AssignmentWebSitePrototype.Artwork
-{
-
-
-    public partial class BrowseArtwork
-    {
-
+namespace AssignmentWebSitePrototype.Artwork {
+    
+    
+    public partial class BrowseArtwork {
+        
         /// <summary>
         /// txtSearch control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearch;
-
+        
         /// <summary>
         /// btnSearch control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
-
+        
         /// <summary>
         /// artworkList control.
         /// </summary>
@@ -40,14 +38,5 @@ namespace AssignmentWebSitePrototype.Artwork
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView artworkList;
-
-        /// <summary>
-        /// artworkData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource artworkData;
     }
 }

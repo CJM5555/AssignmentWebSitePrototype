@@ -111,7 +111,10 @@
                     
                     <td class="auto-style15" style="background-color:black; padding:0px 10px 0px 10px;">
                        <a style="margin:0px 5px 0px 5px"><asp:LinkButton ID="linkAccount" runat="server" Visible="False" OnClick="linkAccount_Click"></asp:LinkButton></a>
-                       <a style="margin:0px 5px 0px 5px"><asp:Label ID="lblGuest" runat="server" Text="Guest" ForeColor="White" ></asp:Label></a>
+                       <a style="margin:0px 5px 0px 5px"><asp:Label ID="lblGuest" runat="server" Text="Guest" ForeColor="White" ></asp:Label>
+                        <asp:LoginName ID="LoginName1" runat="server" ForeColor="White" />
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/DefaultHome.aspx" />
+                        </a>
                     </td>
 
                     <td class="auto-style16" style="background-color:black;padding:0px 10px 0px 10px;">

@@ -46,7 +46,9 @@
 &nbsp;<asp:TextBox ID="txtPasswordLogin" runat="server"></asp:TextBox>
                 </td>
             <td class="auto-style10">
-                &nbsp;</td>
+                <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/DefaultHome.aspx">
+                </asp:Login>
+            </td>
         </tr>
         <tr>
             <td class="auto-style13">

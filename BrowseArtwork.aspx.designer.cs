@@ -13,6 +13,15 @@ namespace AssignmentWebSitePrototype.Artwork {
     public partial class BrowseArtwork {
         
         /// <summary>
+        /// cartHyperlink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink cartHyperlink;
+        
+        /// <summary>
         /// txtSearch control.
         /// </summary>
         /// <remarks>

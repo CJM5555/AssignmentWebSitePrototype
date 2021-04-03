@@ -11,14 +11,21 @@ namespace AssignmentWebSitePrototype.Artwork
 {
     public partial class BrowseArtwork : System.Web.UI.Page
     {
+        List<int> cartList = new List<int>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["cartList"] != null) {
+                cartList = (List<int>) Session["cartList"];
+            }
+
+
             string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(strCon);
 
             con.Open();
 
-            string strSelect = "SELECT Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName FROM Artwork INNER JOIN Artists ON Artwork.artistID=Artists.artistID WHERE (Artwork.isDraft = 0)";
+            string strSelect = "SELECT Artwork.artworkID, Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName FROM Artwork INNER JOIN Artists ON Artwork.artistID=Artists.artistID WHERE (Artwork.isDraft = 0)";
             SqlCommand cmdSelect = new SqlCommand(strSelect, con);
 
             artworkList.DataSource = cmdSelect.ExecuteReader();
@@ -34,10 +41,10 @@ namespace AssignmentWebSitePrototype.Artwork
 
             con.Open();
 
-            string strSelect = "SELECT Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName " +
+            string strSelect = "SELECT Artwork.artworkID, Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName " +
                 "FROM Artwork INNER JOIN Artists ON Artwork.artistID=Artists.artistID " +
                 "WHERE (Artwork.isDraft = 0) AND (Artwork.title LIKE @search OR Artwork.description LIKE @search)" +
-                "UNION SELECT Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName " +
+                "UNION SELECT Artwork.artworkID, Artwork.title, Artwork.description, Artwork.imageUrl, Artwork.price, Artwork.quantity, Artists.artistName " +
                 "FROM Artwork INNER JOIN Artists ON Artwork.artistID=Artists.artistID, Item_Tag, Tag " +
                 "WHERE Artwork.artworkID = Item_Tag.artworkID AND Item_Tag.tagID = Tag.tagID AND Tag.title LIKE @search";
             SqlCommand cmdSelect = new SqlCommand(strSelect, con);
@@ -49,5 +56,13 @@ namespace AssignmentWebSitePrototype.Artwork
 
             con.Close();
         }
+
+        protected void AddToCart(object sender, CommandEventArgs e)
+        {
+            cartList.Add(Convert.ToInt16(e.CommandArgument));
+            cartHyperlink.Text = "Cart (" + (cartList.Count) + ")";
+            Session["cartList"] = cartList;
+        }
+
     }
 }

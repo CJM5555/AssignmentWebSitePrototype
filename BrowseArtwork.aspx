@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="BrowseArtwork.aspx.cs" Inherits="AssignmentWebSitePrototype.Artwork.BrowseArtwork" %>
+﻿<%@ Page Title="" Language="C#" enableEventValidation="false" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="BrowseArtwork.aspx.cs" Inherits="AssignmentWebSitePrototype.Artwork.BrowseArtwork" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -8,6 +8,8 @@
                             &nbsp;</td>
                         <td>
 
+                            <asp:HyperLink style="float:right;" ID="cartHyperlink" runat="server" NavigateUrl="~/Cart.aspx" Text="Cart"></asp:HyperLink>
+                            &nbsp;
                             <br />
                             <div style="width:100%; padding:0px 50px 0px 50px;">
                             Artwork List<br />
@@ -31,7 +33,7 @@
                                         <br />Artist Name:
                                         <asp:Label ID="artistNameLabel" runat="server" Text='<%# Eval("artistName") %>' />
                                         <br /><br />
-                                        <asp:Button Text="Add To Cart" runat="server"/>
+                                        <asp:Button Text="Add To Cart" runat="server" CommandName="AddToCart" OnCommand="AddToCart" CommandArgument='<%# Eval("artworkID")  %>'/>
                                     </td>
                                 </AlternatingItemTemplate>
                                 <EmptyDataTemplate>
@@ -63,7 +65,7 @@
                                         <br />Artist Name:
                                         <asp:Label ID="artistNameLabel" runat="server" Text='<%# Eval("artistName") %>' />
                                         <br /><br />
-                                        <asp:Button Text="Add To Cart" runat="server"/>
+                                        <asp:Button Text="Add To Cart" runat="server"  CommandName="AddToCart" OnCommand="AddToCart" CommandArgument='<%# Eval("artworkID")  %>'/>
                                     </td>
                                 </ItemTemplate>
                                 <LayoutTemplate>

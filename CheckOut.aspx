@@ -9,8 +9,6 @@
             &nbsp;
             Check Out Details<br />
             <br />
-            <br />
-            <br />
             Ordered Items<br />
                     <asp:ListView ID="summaryItemList" runat="server">
                 <LayoutTemplate>

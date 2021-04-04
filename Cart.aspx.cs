@@ -47,6 +47,7 @@ namespace AssignmentWebSitePrototype
 
             cartItemList.DataSource = cartListData;
             cartItemList.DataBind();
+
             con.Close();
         }
 

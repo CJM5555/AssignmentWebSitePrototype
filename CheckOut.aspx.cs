@@ -92,6 +92,7 @@ namespace AssignmentWebSitePrototype
                 cmdInsert.Parameters.AddWithValue("@status", "Created"); 
 
                 int orderID = Convert.ToInt16(cmdInsert.ExecuteScalar());
+                string strUpdateQty;
 
                 //Update order item database
                 foreach (int orderedItem in cartList)
@@ -103,6 +104,21 @@ namespace AssignmentWebSitePrototype
                     cmdInsertItem.Parameters.AddWithValue("@orderId", orderID);
                     cmdInsertItem.Parameters.AddWithValue("artworkId", orderedItem);
                     cmdInsertItem.ExecuteNonQuery();
+
+                    //Update artwork quantity
+                    strUpdateQty = "UPDATE Artwork SET quantity=quantity-1 WHERE artworkID=@artworkID";
+                    SqlCommand cmdUpdateQty = new SqlCommand(strUpdateQty, con);
+
+                    cmdUpdateQty.Parameters.Clear();
+                    cmdUpdateQty.Parameters.AddWithValue("@artworkID", orderedItem);
+                    try
+                    {
+                        cmdUpdateQty.ExecuteNonQuery();
+                    }
+                    catch
+                    {
+                        //Out of stock
+                    }
                 }
 
                 con.Close();

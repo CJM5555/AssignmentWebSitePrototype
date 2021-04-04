@@ -10,4 +10,6 @@
 <asp:HyperLink ID="hlDashboard" runat="server" NavigateUrl="~/Artwork/ArtistDashboard.aspx" CssClass="navItem">Dashboard</asp:HyperLink>
 <br />
 <asp:HyperLink ID="hlDraft" runat="server" NavigateUrl="~/Artwork/DraftArtwork.aspx" CssClass="navItem">Drafts</asp:HyperLink>
+<br />
+<asp:HyperLink ID="hlOrder" runat="server" NavigateUrl="~/Artwork/ArtworkOrder.aspx" CssClass="navItem">Orders</asp:HyperLink>
 </div>

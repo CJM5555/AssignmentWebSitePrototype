@@ -67,7 +67,7 @@
                                         <EditItemTemplate>
                                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("quantity") %>'></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfv1" runat="server" ErrorMessage="Quantity is required" Text="*" ForeColor="Red" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
-                                           <asp:RangeValidator ID="rv1" runat="server" ErrorMessage="Quantity cannot be negative" ForeColor="Red" MinimumValue="1" MaximumValue="999999999" ControlToValidate="TextBox2">*</asp:RangeValidator>                                        
+                                           <asp:RangeValidator ID="rv1" runat="server" ErrorMessage="Quantity cannot be negative" ForeColor="Red" MinimumValue="0" MaximumValue="999999999" ControlToValidate="TextBox2">*</asp:RangeValidator>                                        
                                         </EditItemTemplate>
                                         <InsertItemTemplate>
                                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("quantity") %>'></asp:TextBox>

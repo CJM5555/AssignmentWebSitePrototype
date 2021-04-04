@@ -1,0 +1,55 @@
+﻿SET IDENTITY_INSERT [dbo].[Order] ON
+
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1001, 'Nicko', '230 Moland Terrace', 'TnG Ewallet', 5915, '9/27/2020', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1002, 'Filberte', '63 Crowley Parkway', 'COD', 6667, '7/28/2020', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1003, 'Weider', '3 Becker Parkway', 'Online Banking', 911, '12/4/2020', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1004, 'Neill', '975 Northridge Junction', 'COD', 3695, '2/16/2021', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1005, 'Salomon', '4 5th Drive', 'Online Banking', 5296, '3/29/2021', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1006, 'Ingar', '69825 Pepper Wood Center', 'COD', 7683, '2/5/2021', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1007, 'Gaven', '5664 Hallows Road', 'TnG Ewallet', 6100, '8/18/2020', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1008, 'Douglas', '4758 Cody Drive', 'TnG Ewallet', 1936, '2/14/2021', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1009, 'Sancho', '7 Banding Crossing', 'TnG Ewallet', 3982, '5/17/2020', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1010, 'Moss', '53742 Starling Drive', 'Credit Card', 6457, '7/22/2020', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1011, 'Joshuah', '45412 Scott Place', 'Credit Card', 5443, '10/27/2020', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1012, 'Hercules', '312 Summit Parkway', 'TnG Ewallet', 2147, '12/10/2020', 1003, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1013, 'Arte', '090 Lighthouse Bay Center', 'Credit Card', 3487, '5/6/2020', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1014, 'Temp', '07 Derek Circle', 'Online Banking', 6815, '9/12/2020', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1015, 'Poul', '17015 Northfield Park', 'Online Banking', 7051, '3/20/2021', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1016, 'Olivier', '41 Muir Crossing', 'Credit Card', 7356, '8/10/2020', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1017, 'Antonius', '2 Dottie Trail', 'COD', 3993, '11/3/2020', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1018, 'Mandel', '0766 Sunnyside Street', 'COD', 6475, '1/12/2021', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1019, 'Brandon', '525 Glacier Hill Junction', 'Online Banking', 2713, '10/8/2020', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1020, 'Elwin', '1169 Northfield Junction', 'Online Banking', 2957, '9/4/2020', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1021, 'Emlyn', '26893 Old Shore Drive', 'Online Banking', 6374, '5/8/2020', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1022, 'Clyde', '5818 Hauk Crossing', 'Credit Card', 4273, '10/31/2020', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1023, 'Taber', '8 Menomonie Avenue', 'COD', 4923, '1/4/2021', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1024, 'Obidiah', '775 Evergreen Avenue', 'Credit Card', 4438, '3/24/2021', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1025, 'Noland', '68 Talmadge Place', 'Credit Card', 1987, '11/22/2020', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1026, 'Odey', '165 Toban Alley', 'Credit Card', 6614, '11/4/2020', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1027, 'Collin', '1 Butterfield Lane', 'Credit Card', 2067, '2/8/2021', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1028, 'Taite', '31 Toban Center', 'Online Banking', 6674, '11/28/2020', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1029, 'Cyrillus', '52965 Veith Crossing', 'Credit Card', 3183, '3/21/2021', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1030, 'Doyle', '84836 Dorton Trail', 'Online Banking', 704, '8/12/2020', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1031, 'Abelard', '1 Tomscot Park', 'TnG Ewallet', 5471, '3/8/2021', 1003, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1032, 'Jeddy', '6483 Arkansas Street', 'COD', 6392, '1/6/2021', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1033, 'Neale', '83 Fair Oaks Terrace', 'TnG Ewallet', 3244, '2/5/2021', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1034, 'Trueman', '509 Red Cloud Avenue', 'COD', 2046, '7/4/2020', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1035, 'Hans', '07 Russell Pass', 'Credit Card', 3886, '7/2/2020', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1036, 'Dilan', '340 Porter Lane', 'Online Banking', 2815, '12/11/2020', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1037, 'Arlen', '63273 Corscot Circle', 'Online Banking', 1115, '4/26/2020', 1002, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1038, 'Noach', '13421 Portage Junction', 'TnG Ewallet', 5857, '11/5/2020', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1039, 'Dallon', '75611 Pleasure Drive', 'Online Banking', 2673, '6/6/2020', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1040, 'Jose', '27 Kropf Alley', 'Online Banking', 6201, '2/22/2021', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1041, 'Jarrid', '5389 Sloan Hill', 'COD', 7155, '12/16/2020', 1003, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1042, 'Austin', '4 Melrose Plaza', 'TnG Ewallet', 3578, '1/28/2021', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1043, 'Florian', '15 Corben Lane', 'TnG Ewallet', 4487, '4/3/2021', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1044, 'Franny', '36762 Fremont Place', 'TnG Ewallet', 7201, '1/20/2021', 1000, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1045, 'Joe', '4 Vidon Trail', 'Credit Card', 2922, '2/1/2021', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1046, 'Lancelot', '176 Browning Park', 'Online Banking', 617, '5/21/2020', 1004, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1047, 'Kristofer', '52713 Prairie Rose Lane', 'Credit Card', 1192, '3/30/2021', 1001, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1048, 'Ernest', '90 Northfield Avenue', 'TnG Ewallet', 5680, '11/20/2020', 1005, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1049, 'Demott', '32 Bobwhite Street', 'TnG Ewallet', 2798, '6/23/2020', 1003, 'Created');
+insert into [Order] (OrderId, ReceipientName, DeliveryAddress, PaymentMethod, TotalPayment, OrderDate, userId, status) values (1050, 'Joshia', '334 Norway Maple Way', 'COD', 3973, '5/11/2020', 1004, 'Created');
+
+
+SET IDENTITY_INSERT [dbo].[Order] OFF

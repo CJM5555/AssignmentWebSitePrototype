@@ -74,6 +74,7 @@
     </Content>
     <Content Include="Artwork\ArtistNavigation.ascx" />
     <Content Include="Artwork\ArtistNavigationBar.css" />
+    <Content Include="Artwork\ArtworkOrder.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="CheckOut.aspx" />
     <Content Include="images\183-1837660_modern-art-wallpapers-free-data-src-w-full.jpg" />
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="Artwork\ArtistNavigation.ascx.designer.cs">
       <DependentUpon>ArtistNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Artwork\ArtworkOrder.aspx.cs">
+      <DependentUpon>ArtworkOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Artwork\ArtworkOrder.aspx.designer.cs">
+      <DependentUpon>ArtworkOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="BrowseArtwork.aspx.cs">
       <DependentUpon>BrowseArtwork.aspx</DependentUpon>

@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="DefaultHome.aspx.cs" Inherits="AssignmentWebSitePrototype.HomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style23 {
+            height: 93px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -35,7 +40,6 @@
         <span class="bullet" onclick="currentSlide(3)"></span> 
     </div>
 
-    <div>
-
+    <div class="auto-style23">
     </div>
 </asp:Content>

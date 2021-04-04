@@ -68,6 +68,7 @@ input[type=button], input[type=submit], input[type=reset] {
     color: #000;
 }
 
+   
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
     background-color: #000000;
     color: #fff;

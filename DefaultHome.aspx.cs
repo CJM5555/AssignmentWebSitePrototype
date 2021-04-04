@@ -10,7 +10,10 @@ namespace AssignmentWebSitePrototype
    
     public partial class HomePage : System.Web.UI.Page
     {
-        
+        String usersEmail = null;
+        String usersName = null;
+        int id;
+       
         protected void Page_PreInit(object sender, EventArgs e)
         {
             
@@ -18,9 +21,19 @@ namespace AssignmentWebSitePrototype
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["loginName"] != null)
+            {
+                usersEmail = Session["loginEmail"].ToString();
+                usersName = Session["loginName"].ToString();
+                id = (int)Session["loginID"];
 
-            
-            
+            }
+            else
+            {
+               
+            }
+
+
 
         }
     }

@@ -13,7 +13,10 @@ namespace AssignmentWebSitePrototype
     {
         String userEmail = null;
         int id;
-        
+        //Session["loginName"] 
+        //Session["loginEmail"] 
+        //Session["loginID"] 
+       // Session["isLogin"]
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -38,10 +41,7 @@ namespace AssignmentWebSitePrototype
             //con.Close();
             }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            dvcCustomerDetails.Visible = false;
-        }
+        
 
 
         //SELECT userID, userName, phoneNo, email, address, state, postcode, city, isArtist FROM Users WHERE(email = @email)

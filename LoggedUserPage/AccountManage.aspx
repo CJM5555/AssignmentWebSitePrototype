@@ -7,7 +7,7 @@
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div> 
+    <div> 
     <table style="width:100%;">
         <tr>
             <td class="auto-style22">
@@ -60,8 +60,7 @@
         </tr>
         <tr>
             <td class="auto-style22">
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

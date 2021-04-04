@@ -147,6 +147,8 @@
     <Content Include="scripts\dbo.Artists.data.sql" />
     <Content Include="scripts\dbo.Artwork.data.sql" />
     <Content Include="scripts\dbo.Item_Tag.data.sql" />
+    <Content Include="scripts\dbo.Order.data.sql" />
+    <Content Include="scripts\dbo.OrderItem.data.sql" />
     <Content Include="scripts\dbo.Tag.data.sql" />
     <Content Include="scripts\dbo.Users.data.sql" />
     <Content Include="Web.config" />

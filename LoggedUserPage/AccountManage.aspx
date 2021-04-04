@@ -38,26 +38,27 @@
     <asp:DetailsView ID="dvcArtistDetails" runat="server" AutoGenerateRows="False" Height="50px" Width="352px" DataKeyNames="artistID" DataSourceID="SqlDataSource1" >
         <CommandRowStyle Font-Bold="True" Font-Underline="False" ForeColor="#0000CC" />
         <Fields>
-            <asp:BoundField DataField="artistID" HeaderText="Artist ID" InsertVisible="False" ReadOnly="True" SortExpression="artistID" />
-            <asp:BoundField DataField="artistName" HeaderText="Artist Name" SortExpression="artistName" InsertVisible="False" ReadOnly="True" />
-            <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" InsertVisible="False" ReadOnly="True" />
-            <asp:BoundField DataField="phoneNo" HeaderText="Phone No" SortExpression="phoneNo" />
-            <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address" />
-            <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
-            <asp:BoundField DataField="postcode" HeaderText="Postcode" SortExpression="postcode" />
-            <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
+            <asp:BoundField DataField="artistID" HeaderText="artistID" InsertVisible="False" ReadOnly="True" SortExpression="artistID" />
+            <asp:BoundField DataField="artistName" HeaderText="artistName" ReadOnly="True" SortExpression="artistName" />
+            <asp:BoundField DataField="email" HeaderText="email" ReadOnly="True" SortExpression="email" />
+            <asp:BoundField DataField="phoneNo" HeaderText="phoneNo" SortExpression="phoneNo" />
+            <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
+            <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+            <asp:BoundField DataField="postcode" HeaderText="postcode" SortExpression="postcode" />
+            <asp:BoundField DataField="state" HeaderText="state" SortExpression="state" />
+            <asp:CommandField ShowEditButton="True" />
         </Fields>
     </asp:DetailsView>
-                <asp:DetailsView ID="dvcCustomerDetails" runat="server" AutoGenerateRows="False" Height="50px" Width="201px" DataKeyNames="userID" DataSourceID="SqlDataSource2">
+                <asp:DetailsView ID="dvcCustomerDetails" runat="server" AutoGenerateRows="False" Height="50px" Width="221px" DataKeyNames="userID" DataSourceID="SqlDataSource2">
                     <Fields>
-                        <asp:BoundField DataField="userID" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="userID" />
-                        <asp:BoundField DataField="userName" HeaderText="Customer Name" InsertVisible="False" ReadOnly="True" SortExpression="userName" />
-                        <asp:BoundField DataField="email" HeaderText="Email" InsertVisible="False" ReadOnly="True" SortExpression="email" />
-                        <asp:BoundField DataField="phoneNo" HeaderText="PhoneNo" SortExpression="phoneNo" />
-                        <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address" />
-                        <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
-                        <asp:DynamicField DataField="postcode" HeaderText="Postcode" />
-                        <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
+                        <asp:BoundField DataField="userID" HeaderText="userID" InsertVisible="False" ReadOnly="True" SortExpression="userID" />
+                        <asp:BoundField DataField="userName" HeaderText="userName" ReadOnly="True" SortExpression="userName" />
+                        <asp:BoundField DataField="email" HeaderText="email" ReadOnly="True" SortExpression="email" />
+                        <asp:BoundField DataField="phoneNo" HeaderText="phoneNo" SortExpression="phoneNo" />
+                        <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
+                        <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                        <asp:BoundField DataField="postcode" HeaderText="postcode" SortExpression="postcode" />
+                        <asp:BoundField DataField="state" HeaderText="state" SortExpression="state" />
                         <asp:CommandField ShowEditButton="True" />
                     </Fields>
                 </asp:DetailsView>

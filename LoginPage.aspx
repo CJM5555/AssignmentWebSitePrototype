@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="AssignmentWebSitePrototype.LoginPage" %>
+﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostBack="true" MasterPageFile="~/SiteMain.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="AssignmentWebSitePrototype.LoginPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
     .auto-style10 {

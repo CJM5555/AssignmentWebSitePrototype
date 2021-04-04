@@ -23,7 +23,6 @@ namespace AssignmentWebSitePrototype
                     btnRegister.Visible = false;  
                     linkAccount.Text = userEmail;
                     linkAccount.Visible = true;
-
              }
              else
              {
@@ -31,8 +30,6 @@ namespace AssignmentWebSitePrototype
                     linkAccount.Text = null;
                     linkAccount.Visible = false;
               }
-
-           
 
         }
 

@@ -13,13 +13,29 @@ namespace AssignmentWebSitePrototype
 {
     public partial class LoginPage : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 RadioButtonList rdlLoginAs = (RadioButtonList)Login1.FindControl("LoginAs");
                 rdlLoginAs.SelectedIndex = 0;
             }
+
+            if (Session["failLoginArtist"] != null)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('No Artist Account Records is Found! Have You Select The Correct Login Type?')", true);
+                //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No Account is Found!')", true);
+                Session.Remove("failLoginArtist");
+            }else if(Session["failLoginCustomer"] !=null)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('No Customer Account Records is Found! Have You Select The Correct Login Type?')", true);
+                //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No Account is Found!')", true);
+                Session.Remove("failLoginCustomer");
+            }
+
+
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -33,7 +49,7 @@ namespace AssignmentWebSitePrototype
             RadioButtonList rdlLoginAs = (RadioButtonList)Login1.FindControl("LoginAs");
             TextBox lgName = (TextBox)Login1.FindControl("UserName");
             TextBox lgPassword = (TextBox)Login1.FindControl("Password");
-
+           
             
             if (rdlLoginAs.SelectedValue == "Artists")
             {
@@ -59,16 +75,22 @@ namespace AssignmentWebSitePrototype
                     Session["loginEmail"] = dtrUsers["email"].ToString();
                     Session["loginID"] = Convert.ToInt32(dtrUsers["artistID"]);
                     Session["isLogin"] = 1;
-
-                    Response.Write("records exist");
-
+                    Session["loginRole"] = "Artists";
+                    //Response.Write("records exist");
+                    con.Close();
                 }
                 else
                 {
-                    Response.Write("No records retrieved");
+                    Session["failLoginArtist"] = 1;
+                    FormsAuthentication.SignOut();
+                    FormsAuthentication.RedirectToLoginPage();
+                    Response.Redirect(FormsAuthentication.LoginUrl);
+                    //Response.Write();
+                    
+                    con.Close();
 
                 }
-                con.Close();
+               
             }
             else if (rdlLoginAs.SelectedValue == "Customers")
             {
@@ -91,15 +113,23 @@ namespace AssignmentWebSitePrototype
                     Session["loginName"] = dtrUsers["userName"].ToString();
                     Session["loginID"] = Convert.ToInt32(dtrUsers["userID"]);
                     Session["isLogin"] = 1;
+                    Session["loginRole"] = "Customers";
 
-                   
                 }
                 else
                 {
-                    Response.Write("No records retrieved");
+                    Session["failLoginCustomer"] = 1;
+                    //Response.Write("No records retrieved");
+                    FormsAuthentication.SignOut();
+                    FormsAuthentication.RedirectToLoginPage();
+                    Response.Redirect(FormsAuthentication.LoginUrl);
                 }
                 con.Close();
+
+                
             }
+
+    
         }
     }
 }

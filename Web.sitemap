@@ -2,6 +2,8 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="~/DefaultHome.aspx" title="Home"  description="Home">
     <siteMapNode url="~/BrowseArtwork.aspx" title=" Browse Arts"  description="View Arts" />
-    
+    <siteMapNode url="~/OrderHistory.aspx" title=" Order History"  description="Order History" />
+    <siteMapNode url="~/Artwork/ArtistDashboard.aspx" title=" Artist Dashboard"  description="Artist Dashboard" />
+
   </siteMapNode>
 </siteMap>

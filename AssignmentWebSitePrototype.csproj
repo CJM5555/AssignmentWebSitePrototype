@@ -140,6 +140,7 @@
     <Content Include="Artwork\ViewArtwork.aspx" />
     <Content Include="DefaultHome.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="OrderHistory.aspx" />
     <Content Include="OrderSuccess.aspx" />
     <Content Include="RegisterPage.aspx" />
     <Content Include="scripts\dbo.Artists.data.sql" />
@@ -227,6 +228,13 @@
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderSuccess.aspx.cs">
       <DependentUpon>OrderSuccess.aspx</DependentUpon>

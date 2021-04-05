@@ -62,7 +62,7 @@ namespace AssignmentWebSitePrototype
 
         protected void btnCheckOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/CheckOut.aspx");
+            Response.Redirect("~/LoggedUserPage/CheckOut.aspx");
         }
     }
 }

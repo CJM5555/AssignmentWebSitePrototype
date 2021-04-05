@@ -14,10 +14,10 @@ namespace AssignmentWebSitePrototype
         String userPass = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
- 
-            //if (Session["email"] != null && Session["password"] != null)
-            if (Session["isLogin"] != null)
+            
+
+                //if (Session["email"] != null && Session["password"] != null)
+             if (Session["isLogin"] != null)
              {
                     userEmail = Session["loginEmail"].ToString();
                     btnRegister.Visible = false;  

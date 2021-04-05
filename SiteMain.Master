@@ -70,11 +70,11 @@
         }
         .auto-style13 {
             height: 40px;
-            width: 39%;
+            width: 45%;
         }
         .auto-style14 {
             height: 40px;
-            width: 35%;
+            width: 25%;
         }
         .auto-style15 {
             height: 40px;
@@ -82,7 +82,7 @@
         }
         .auto-style16 {
             height: 40px;
-         
+            width: 113px;
         }
         .auto-style22 {
             width: 850px;

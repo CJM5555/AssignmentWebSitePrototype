@@ -59,6 +59,14 @@
                                     </td>
                                     </tr>
                                 </ItemTemplate>
+                                <EmptyItemTemplate>
+                                    <tr runat="server" class="zoom">
+                                    <td>
+                                        <asp:Label runat="Server" Text='No Order found' />             
+                                    </td>
+                                    </tr>
+                                </EmptyItemTemplate>
+
                              </asp:ListView>
                         </td>
                     </tr>

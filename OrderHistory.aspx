@@ -156,7 +156,11 @@
                     </tr>
                 </SelectedItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="OrderList" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [ReceipientName], [DeliveryAddress], [PaymentMethod], [TotalPayment], [OrderDate], [status] FROM [Order]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="OrderList" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [ReceipientName], [DeliveryAddress], [PaymentMethod], [TotalPayment], [OrderDate], [status] FROM [Order] WHERE ([userId] = @userId)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="userId" SessionField="loginID" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>
             <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
             <br />

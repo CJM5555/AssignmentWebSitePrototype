@@ -81,7 +81,7 @@ namespace AssignmentWebSitePrototype.Artwork
                 string strInsert = "INSERT INTO Artwork (artistID,title,description,imageUrl,price,quantity,isDraft) VALUES (@artistID,@title,@desc,@imageUrl,@price,@quantity,@isDraft); SELECT SCOPE_IDENTITY();";
 
                 SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                cmdInsert.Parameters.AddWithValue("@artistID", 1002); // To be changed
+                cmdInsert.Parameters.AddWithValue("@artistID", Convert.ToInt16(Session["loginID"])); // To be changed
                 cmdInsert.Parameters.AddWithValue("@title", txtTitle.Text == null? null: txtTitle.Text);
                 cmdInsert.Parameters.AddWithValue("@desc", txtDesc.Text == null? null : txtDesc.Text);
 

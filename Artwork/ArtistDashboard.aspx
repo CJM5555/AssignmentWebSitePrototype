@@ -54,11 +54,19 @@
                                     </td>
                                     </tr>
                                 </ItemTemplate>
+                                <EmptyItemTemplate>
+                                    <tr runat="server" class="zoom">
+                                    <td>
+                                        <asp:Label runat="Server" Text='No Artwork found' />             
+                                    </td>
+                                    </tr>
+                                </EmptyItemTemplate>
+
                             </asp:ListView>
                             <asp:SqlDataSource ID="artworkData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [artworkID], [title], [imageUrl], [description], [price], [quantity] FROM [Artwork] WHERE ([isDraft] = @isDraft) AND artistID=@artistID">
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="0" Name="isDraft" Type="Int16" />
-                                    <asp:Parameter DefaultValue="1001" Name="artistID" /> 
+                                    <asp:SessionParameter DefaultValue="1001" Name="artistID" SessionField="loginID" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <asp:Label ID="lblArtworkSelect" runat="server"></asp:Label>

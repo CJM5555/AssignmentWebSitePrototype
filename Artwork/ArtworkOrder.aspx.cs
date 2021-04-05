@@ -17,10 +17,11 @@ namespace AssignmentWebSitePrototype.Artwork
         DataSet orderListData = new DataSet();
         SqlDataAdapter da = new SqlDataAdapter();
 
-        int artistID = 1002;
+        int artistID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            artistID = Convert.ToInt16(Session["loginID"]);
             refreshOrderList();
         }
 
@@ -68,15 +69,16 @@ namespace AssignmentWebSitePrototype.Artwork
                     refreshOrderList();
 
                     //Send notification to user
-                    string strSelectUser = "SELECT Users.email FROM [Order] O, OrderItem OI, Users WHERE O.OrderId = OI.OrderID AND O.userId = Users.userId AND OrderItem.OrderItem=@OrderItem";
+                    string strSelectUser = "SELECT Users.email FROM [Order] O, OrderItem OI, Users WHERE O.OrderId = OI.OrderId AND O.userId = Users.userID AND OI.OrderItem=@OrderItem";
                     SqlCommand cmdSelectUser = new SqlCommand(strSelectUser, con);
-                    cmdSelectUser.Parameters.AddWithValue("@OrderItem", e.CommandArgument);
+                    cmdSelectUser.Parameters.Clear();
+                    cmdSelectUser.Parameters.AddWithValue("@OrderItem", Convert.ToString(e.CommandArgument));
 
                     string userEmail = Convert.ToString(cmdSelectUser.ExecuteScalar());
 
                     sendEmailNotification(trackNo,userEmail);
                 }
-                catch
+                catch (Exception ex)
                 {
                     Response.Write("<script>alert('Something went wrong!');</script>");
                 }

@@ -80,7 +80,7 @@
                 </ItemTemplate>
             </asp:ListView>
             <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/LoggedUserPage/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
             <br />
             <br />
         </div>

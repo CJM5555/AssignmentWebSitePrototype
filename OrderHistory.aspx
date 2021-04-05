@@ -158,11 +158,11 @@
             </asp:ListView>
             <asp:SqlDataSource ID="OrderList" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [ReceipientName], [DeliveryAddress], [PaymentMethod], [TotalPayment], [OrderDate], [status] FROM [Order] WHERE ([userId] = @userId)">
                 <SelectParameters>
-                    <asp:SessionParameter Name="userId" SessionField="loginID" Type="Int32" />
+                    <asp:SessionParameter Name="userId" SessionField="loginID" Type="Int32" DefaultValue="1001" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/LoggedUserPage/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
             <br />
             <br />
         </div>

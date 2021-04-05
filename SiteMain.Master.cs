@@ -21,7 +21,7 @@ namespace AssignmentWebSitePrototype
              {
                     userEmail = Session["loginEmail"].ToString();
                     btnRegister.Visible = false;  
-                    linkAccount.Text = userEmail;
+                    linkAccount.Text = "Account Info";
                     linkAccount.Visible = true;
              }
              else

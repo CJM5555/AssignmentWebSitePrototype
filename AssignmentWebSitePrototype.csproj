@@ -67,12 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\ProfileImg\3f9470b34a8e3f526dbdb022f9f19cf7.jpg" />
-    <Content Include="LoggedUserPage\AccountManage.aspx" />
-    <Content Include="App_Data\database.mdf" />
     <Content Include="App_Data\database_log.ldf">
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <Content Include="images\ProfileImg\3f9470b34a8e3f526dbdb022f9f19cf7.jpg" />
+    <Content Include="LoggedUserPage\AccountManage.aspx" />
+    <Content Include="App_Data\database.mdf" />
     <Content Include="Artwork\ArtistNavigation.ascx" />
     <Content Include="Artwork\ArtistNavigationBar.css" />
     <Content Include="Artwork\ArtworkOrder.aspx" />
@@ -184,8 +184,8 @@
     <Compile Include="Artwork\ArtworkOrder.aspx.designer.cs">
       <DependentUpon>ArtworkOrder.aspx</DependentUpon>
     </Compile>
-<Compile Include="LoggedUserPage\BrowseArtwork.aspx.cs">
-<DependentUpon>BrowseArtwork.aspx</DependentUpon>
+    <Compile Include="LoggedUserPage\BrowseArtwork.aspx.cs">
+      <DependentUpon>BrowseArtwork.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoggedUserPage\BrowseArtwork.aspx.designer.cs">
@@ -271,7 +271,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-  <Content Include="Artwork\Web.config" />
+    <Content Include="Artwork\Web.config" />
     <Content Include="LoggedUserPage\Web.config" />
     <None Include="packages.config" />
     <Content Include="SiteMain.Master" />

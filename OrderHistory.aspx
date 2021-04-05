@@ -158,7 +158,7 @@
             </asp:ListView>
             <asp:SqlDataSource ID="OrderList" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [ReceipientName], [DeliveryAddress], [PaymentMethod], [TotalPayment], [OrderDate], [status] FROM [Order]"></asp:SqlDataSource>
             <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/LoggedUserPage/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/BrowseArtwork.aspx">Back To Browse Artwork</asp:HyperLink>
             <br />
             <br />
         </div>

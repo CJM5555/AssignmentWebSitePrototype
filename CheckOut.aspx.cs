@@ -123,7 +123,7 @@ namespace AssignmentWebSitePrototype
 
                 con.Close();
                 sendEmailNotification();
-                Response.Redirect("~/LoggedUserPage/OrderSuccess.aspx?" + "name=" + txtReceipientName.Text + "&address=" + txtDeliveryAddress.Text + "&type=" + rblPaymentType.SelectedValue.ToString());
+                Response.Redirect("~/OrderSuccess.aspx?" + "name=" + txtReceipientName.Text + "&address=" + txtDeliveryAddress.Text + "&type=" + rblPaymentType.SelectedValue.ToString());
                 
             }
         }

@@ -21,8 +21,6 @@ namespace AssignmentWebSitePrototype
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-
             if (Session["loginName"] != null)
             {
                 usersEmail = Session["loginEmail"].ToString();

@@ -29,7 +29,7 @@
         <tr>
             <td class="auto-style26">
                 <div>
-                    <asp:Image ID="ProfileImage" runat="server" ImageUrl="" Height="78px" OnDataBinding="Page_Load" Width="92px"/>
+                    <asp:Image ID="ProfileImage" runat="server" ImageUrl='<%# "~/images/" + Eval("imageUrl") %>' Height="78px" OnDataBinding="Page_Load" Width="92px"/>
                 </div>&nbsp;<asp:FileUpload ID="FileUpload1" runat="server" Visible="False" onchange="imageUploaded()"/>
                 <asp:Button ID="btnChangeImg" runat="server" OnClick="Button1_Click" Text="Edit Image" Width="183px" />
                 <asp:Button ID="btnSaveImg" runat="server" Text="Save" Visible="False" Width="162px" OnClick="btnSaveImg_Click" />

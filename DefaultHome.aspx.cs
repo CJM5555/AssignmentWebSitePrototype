@@ -28,12 +28,7 @@ namespace AssignmentWebSitePrototype
                 id = (int)Session["loginID"];
 
             }
-            else
-            {
-               
-            }
-
-
+            
 
         }
     }

@@ -110,7 +110,7 @@
                         </td>
                     
                     <td class="auto-style15" style="background-color:black; padding:0px 10px 0px 10px;">
-                       <a style="margin:0px 5px 0px 5px"><asp:LinkButton ID="linkAccount" runat="server" Visible="False" OnClick="linkAccount_Click"></asp:LinkButton></a>
+                       <a style="margin:0px 5px 0px 5px"><asp:LinkButton ID="linkAccount" runat="server" Visible="False" OnClick="linkAccount_Click" ForeColor="White"></asp:LinkButton></a>
                     </td>
 
                     <td class="auto-style16" style="background-color:black;padding:0px 10px 0px 10px;">
@@ -120,7 +120,7 @@
                     </td>
                     <td class="auto-style3" style="background-color:black;padding:0px 10px 0px 10px;">
                        <a>
-                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/DefaultHome.aspx" LoginText="<input type='button' value='Login' />" LogoutText="<input type='button' value='Logout' />" OnLoggingOut="LoginStatus1_LoggingOut" />
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/DefaultHome.aspx" LoginText="<input type='button' value='Login' />" LogoutText="<input type='button' value='Logout' />" OnLoggingOut="LoginStatus1_LoggingOut" LogoutAction="Redirect" />
                         </a>
                     </td>
                     <td class="auto-style3" style="background-color:black;padding:0px 10px 0px 10px;">

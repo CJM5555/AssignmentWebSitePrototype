@@ -123,12 +123,12 @@ namespace AssignmentWebSitePrototype.Artwork
                     try
                     {
                         artworkID = Convert.ToInt16(cmdInsert.ExecuteScalar());
+                        updateTagItem(artworkID, con);
                     }
                     catch
                     {
                         Response.Write("<script>alert('Something went wrong! Please relogin your account');</script>");
                     }
-                    updateTagItem(artworkID,con);
                     con.Close();
                     Response.Redirect("~/Artwork/ArtistDashboard.aspx");
                 }

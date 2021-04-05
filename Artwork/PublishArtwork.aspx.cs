@@ -26,7 +26,7 @@ namespace AssignmentWebSitePrototype.Artwork
             if (IsPostBack && uploadPreview.HasFile)
             {
                 uploadPreview.Visible = false;
-                Session["ImageUpload"] = uploadPreview;
+                Cache.Insert("ImageUpload", uploadPreview);
                 lblImagePath.Text = uploadPreview.FileName;
 
                 System.IO.BinaryReader br = new System.IO.BinaryReader(uploadPreview.PostedFile.InputStream);
@@ -85,9 +85,9 @@ namespace AssignmentWebSitePrototype.Artwork
                 cmdInsert.Parameters.AddWithValue("@title", txtTitle.Text == null? null: txtTitle.Text);
                 cmdInsert.Parameters.AddWithValue("@desc", txtDesc.Text == null? null : txtDesc.Text);
 
-                if (Session["ImageUpload"] != null)
+                if (Cache["ImageUpload"] != null)
                 {
-                    uploadPreview = (FileUpload)Session["ImageUpload"];
+                    uploadPreview = (FileUpload)Cache["ImageUpload"];
                     string imagePath = Server.MapPath("/images/" + lblImagePath.Text);
                     uploadPreview.SaveAs(imagePath);
 
@@ -105,15 +105,29 @@ namespace AssignmentWebSitePrototype.Artwork
                 if (sender.Equals(btnDraft))
                 {
                     cmdInsert.Parameters.AddWithValue("@isDraft", 1);
-                    artworkID = Convert.ToInt16(cmdInsert.ExecuteScalar());
-                    updateTagItem(artworkID,con);
+                    try
+                    {
+                        artworkID = Convert.ToInt16(cmdInsert.ExecuteScalar());
+                        updateTagItem(artworkID, con);
+                    }
+                    catch
+                    {
+                        Response.Write("<script>alert('Something went wrong! Please relogin your account');</script>");
+                    }
                     con.Close();
                     Response.Redirect("~/Artwork/DraftArtwork.aspx");
                 }
                 else
                 {
                     cmdInsert.Parameters.AddWithValue("@isDraft", 0);
-                    artworkID = Convert.ToInt16(cmdInsert.ExecuteScalar());
+                    try
+                    {
+                        artworkID = Convert.ToInt16(cmdInsert.ExecuteScalar());
+                    }
+                    catch
+                    {
+                        Response.Write("<script>alert('Something went wrong! Please relogin your account');</script>");
+                    }
                     updateTagItem(artworkID,con);
                     con.Close();
                     Response.Redirect("~/Artwork/ArtistDashboard.aspx");

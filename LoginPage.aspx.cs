@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Web.Security;
 
 
 namespace AssignmentWebSitePrototype
@@ -14,7 +15,11 @@ namespace AssignmentWebSitePrototype
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!IsPostBack)
+            {
+                RadioButtonList rdlLoginAs = (RadioButtonList)Login1.FindControl("LoginAs");
+                rdlLoginAs.SelectedIndex = 0;
+            }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -22,38 +27,79 @@ namespace AssignmentWebSitePrototype
             Response.Redirect("~/RegisterPage.aspx");//redirect to register page
         }
 
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            //Boolean isLogin = false;
-            string strCon = ConfigurationManager.ConnectionStrings["conDatabase"].ConnectionString;
-            SqlConnection con = new SqlConnection(strCon);
-            con.Open();
-            SqlCommand cmdSelect;
-            string strSelect = "Select * from Users WHERE email= @emailAccount AND password= @pass";
-            cmdSelect = new SqlCommand(strSelect, con);
 
-            cmdSelect.Parameters.AddWithValue("@emailAccount", txtEmailLogin.Text);
-            cmdSelect.Parameters.AddWithValue("@pass", txtPasswordLogin.Text);
-            SqlDataReader dtrUsers = cmdSelect.ExecuteReader();
-            //
-            //
-            if (dtrUsers.HasRows)
+        protected void LoginButton_Click1(object sender, EventArgs e)
+        {
+            RadioButtonList rdlLoginAs = (RadioButtonList)Login1.FindControl("LoginAs");
+            TextBox lgName = (TextBox)Login1.FindControl("UserName");
+            TextBox lgPassword = (TextBox)Login1.FindControl("Password");
+
+            
+            if (rdlLoginAs.SelectedValue == "Artists")
             {
-                Session["userEmail"] = txtEmailLogin.Text;
-                Session["userPassword"] = txtPasswordLogin.Text;
-                Session["userID"] = Convert.ToInt32(dtrUsers["userID"]);
-                Session["isLogin"] = 1;
-                //isLogin = true;
-                Response.Write("records exist");
+
+                string strCon = ConfigurationManager.ConnectionStrings["conDatabase"].ConnectionString;
+                SqlConnection con = new SqlConnection(strCon);
+                con.Open();
+                SqlCommand cmdSelect;
+                string strSelect = "Select * from Artists WHERE artistName= @user AND password= @pass";
+                cmdSelect = new SqlCommand(strSelect, con);
+
+
+                cmdSelect.Parameters.AddWithValue("@user", lgName.Text);
+                cmdSelect.Parameters.AddWithValue("@pass", lgPassword.Text);
+                SqlDataReader dtrUsers = cmdSelect.ExecuteReader();
+                //
+                //
+                if (dtrUsers.HasRows)
+                {
+                    dtrUsers.Read();
+
+                    Session["loginName"] = dtrUsers["artistName"].ToString();
+                    Session["loginEmail"] = dtrUsers["email"].ToString();
+                    Session["loginID"] = Convert.ToInt32(dtrUsers["artistID"]);
+                    Session["isLogin"] = 1;
+
+                    Response.Write("records exist");
+
+                }
+                else
+                {
+                    Response.Write("No records retrieved");
+
+                }
+                con.Close();
             }
-            else
+            else if (rdlLoginAs.SelectedValue == "Customers")
             {
-                Response.Write("No records retrieved");
-                Session["isLogin"] = null;
+                string strCon = ConfigurationManager.ConnectionStrings["conDatabase"].ConnectionString;
+                SqlConnection con = new SqlConnection(strCon);
+                con.Open();
+                SqlCommand cmdSelect;
+                string strSelect = "Select * from Users WHERE userName= @user AND password= @pass";
+                cmdSelect = new SqlCommand(strSelect, con);
+
+                cmdSelect.Parameters.AddWithValue("@user", lgName.Text);
+                cmdSelect.Parameters.AddWithValue("@pass", lgPassword.Text);
+                SqlDataReader dtrUsers = cmdSelect.ExecuteReader();
+                //
+                //
+                if (dtrUsers.HasRows)
+                {
+                    dtrUsers.Read();
+                    Session["loginEmail"] = dtrUsers["email"].ToString();
+                    Session["loginName"] = dtrUsers["userName"].ToString();
+                    Session["loginID"] = Convert.ToInt32(dtrUsers["userID"]);
+                    Session["isLogin"] = 1;
+
+                   
+                }
+                else
+                {
+                    Response.Write("No records retrieved");
+                }
+                con.Close();
             }
-            con.Close();
-            //if (isLogin)
-            //btnLogin.PostBackUrl = "~/DefaultHome.aspx";
         }
     }
 }

@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AccountManage.aspx" />
+    <Content Include="LoggedUserPage\AccountManage.aspx" />
     <Content Include="App_Data\database.mdf" />
     <Content Include="App_Data\database_log.ldf">
       <DependentUpon>database.mdf</DependentUpon>
@@ -135,7 +135,7 @@
     <Content Include="images\t_Remanence.jpg" />
     <Content Include="images\white-cat-sitting-shelf_23-2148415267.jpg" />
     <Content Include="Artwork\ArtistDashboard.aspx" />
-    <Content Include="BrowseArtwork.aspx" />
+    <Content Include="LoggedUserPage\BrowseArtwork.aspx" />
     <Content Include="Artwork\DraftArtwork.aspx" />
     <Content Include="Artwork\PublishArtwork.aspx" />
     <Content Include="Artwork\ViewArtwork.aspx" />
@@ -155,11 +155,11 @@
     <Content Include="WebsiteStyleSheet.css" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountManage.aspx.cs">
+    <Compile Include="LoggedUserPage\AccountManage.aspx.cs">
       <DependentUpon>AccountManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AccountManage.aspx.designer.cs">
+    <Compile Include="LoggedUserPage\AccountManage.aspx.designer.cs">
       <DependentUpon>AccountManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Artwork\ArtistDashboard.aspx.cs">
@@ -183,11 +183,11 @@
     <Compile Include="Artwork\ArtworkOrder.aspx.designer.cs">
       <DependentUpon>ArtworkOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BrowseArtwork.aspx.cs">
-      <DependentUpon>BrowseArtwork.aspx</DependentUpon>
+<Compile Include="LoggedUserPage\BrowseArtwork.aspx.cs">
+<DependentUpon>BrowseArtwork.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BrowseArtwork.aspx.designer.cs">
+    <Compile Include="LoggedUserPage\BrowseArtwork.aspx.designer.cs">
       <DependentUpon>BrowseArtwork.aspx</DependentUpon>
     </Compile>
     <Compile Include="Artwork\DraftArtwork.aspx.cs">
@@ -270,6 +270,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+  <Content Include="Artwork\Web.config" />
+    <Content Include="LoggedUserPage\Web.config" />
     <None Include="packages.config" />
     <Content Include="SiteMain.Master" />
     <None Include="Web.Debug.config">

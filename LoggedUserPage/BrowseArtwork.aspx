@@ -8,7 +8,7 @@
                             &nbsp;</td>
                         <td>
 
-                            <asp:HyperLink style="float:right; text-decoration:none; " ID="cartHyperlink" runat="server" NavigateUrl="~/Cart.aspx" Text="Cart"></asp:HyperLink>
+                            <asp:HyperLink style="float:right; text-decoration:none; " ID="cartHyperlink" runat="server" NavigateUrl="~/LoggedUserPage/Cart.aspx" Text="Cart"></asp:HyperLink>
                             &nbsp;
                             <br />
                             <div style="width:100%; padding:0px 50px 0px 50px;">

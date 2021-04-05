@@ -12,20 +12,21 @@
 
     <div class="Slides fade">
         
-        <img src="images/artwork-4.jpg" style="width:100%;height:600px" />
-        <div class="text">Caption Text</div>
+         <img src="images/artwork-4.jpg" style="width:100%;height:600px" />
+        <div class="text"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/LoggedUserPage/BrowseArtwork.aspx" BorderColor="White" BorderStyle="Solid"><h3>TO BROWSE ART</h3></asp:HyperLink></div>
     </div>
 
     <div class="Slides fade">
         
         <img src="images/667336.jpg" style="width:100%;height:600px" />
-        <div class="text">Caption Two</div>
+        <div class="text"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/LoggedUserPage/Cart.aspx" ForeColor="White" BorderStyle="Solid" BorderColor="White"><h3>TO ORDER CART</h3></asp:HyperLink></div>
     </div>
 
     <div class="Slides fade">
   
         <img src="images/image_907.jpeg" style="width:100%;height:600px"/>
-        <div class="text">Caption Three</div>
+        <div class="text">
+            <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="White" NavigateUrl="~/Artwork/ArtistDashboard.aspx" BorderStyle="Solid"><h3>TO ARTIST DASHBOARD</h3></asp:HyperLink></div>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

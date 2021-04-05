@@ -64,18 +64,6 @@ namespace AssignmentWebSitePrototype
             }
 
 
-            // object previewImg = cmdSelect1.ExecuteScalar();
-
-            //string strSelect1 = "SELECT userID, userName, phoneNo, email, address, city, postcode, state FROM Users WHERE email = @email";
-
-            ////Link
-            //cmdSelect1.Parameters.AddWithValue("@email", "alice@gmail.com");
-            //cmdSelect.Parameters.AddWithValue("@pass", txtPasswordLogin.Text);
-            // SqlDataReader dtrUsers = cmdSelect1.ExecuteReader();
-            //dvcAccountDetails.DataSource = dtrUsers;
-            //dvcAccountDetails.DataBind();
-
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)

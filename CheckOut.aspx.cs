@@ -130,8 +130,13 @@ namespace AssignmentWebSitePrototype
  
         protected void sendEmailNotification()
         {
-
             string to = "jiamin555555@gmail.com"; //To address  (to be changed)
+
+            if (Session["loginEmail"] != null)
+            {
+                to = Convert.ToString(Session["loginEmail"]);
+            }
+
             string from = "artisnotifications@gmail.com"; //From address    
             MailMessage message = new MailMessage(from, to);
 

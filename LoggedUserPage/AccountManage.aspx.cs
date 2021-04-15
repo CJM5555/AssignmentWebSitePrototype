@@ -37,9 +37,9 @@ namespace AssignmentWebSitePrototype
                 SqlConnection con = new SqlConnection(strCon);
                 con.Open();
                 SqlCommand cmdSelect1;
-                string strSelect1 = "Select profileImage from Artists WHERE artistId = @artistId";
+                string strSelect1 = "Select profileImage from Artists WHERE artistName = @artistName";
                 cmdSelect1 = new SqlCommand(strSelect1, con);
-                cmdSelect1.Parameters.AddWithValue("@artistId", usersName);
+                cmdSelect1.Parameters.AddWithValue("@artistName", usersName);
 
                 String dtrImg = cmdSelect1.ExecuteScalar().ToString();
                 ProfileImage.ImageUrl = "~/image/ProfileImg/" + dtrImg.ToString();
